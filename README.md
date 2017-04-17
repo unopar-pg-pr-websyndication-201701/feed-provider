@@ -1,5 +1,14 @@
 # feed-provider
-Repositório para o projeto feed-provider.
+
+# Tecnologias
+	Laravel
+	sqlite3
+# Premissas
+	Feed deve ser disponibilizado em RSS e Atom
+	Verificar a evolução semanalmente
+	Layout padrão bootstrap
+# Restrições
+	05/05/2017 prazo limite de entrega
 
 # Goals
 	Cadastro de Notícias
