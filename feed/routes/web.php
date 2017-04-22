@@ -20,3 +20,8 @@ Route::get('feed', [
     'as' => 'feed.listar',
     'uses' => 'FeedController@getFeed'
 ]);
+
+Route::get('noticia', [
+    'as' => 'noticia.detalhes',
+    'uses' => 'NoticiaController@getNoticiaDetalhes'
+]);
