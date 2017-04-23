@@ -11,10 +11,24 @@
 |
 */
 
+/*<<<<<<< HEAD
+
 Route::get('/', function () {
     return view('home');
 });
+=======
+>>>>>>> bef241fd4b67987b7a3892c0216091aaccad8c34*/
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
+
+Route::get('feed', [
+    'as' => 'feed.listar',
+    'uses' => 'FeedController@getFeed'
+]);
+
+Route::get('noticia', [
+    'as' => 'noticia.detalhes',
+    'uses' => 'NoticiaController@getNoticiaDetalhes'
+]);
