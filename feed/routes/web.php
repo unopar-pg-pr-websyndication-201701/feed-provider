@@ -28,7 +28,7 @@ Route::get('feed', [
     'uses' => 'FeedController@getFeed'
 ]);
 
-Route::get('noticia', [
+Route::get('noticia/', [
     'as' => 'noticia.detalhes',
     'uses' => 'NoticiaController@getNoticiaDetalhes'
 ]);
