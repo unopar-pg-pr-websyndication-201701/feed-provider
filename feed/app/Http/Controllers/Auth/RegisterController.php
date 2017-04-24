@@ -36,15 +36,17 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest', ['except' => 'logout']);
     }
+
+    /**
 
     /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
-     */
+     
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -59,7 +61,7 @@ class RegisterController extends Controller
      *
      * @param  array  $data
      * @return User
-     */
+     
     protected function create(array $data)
     {
         return User::create([
@@ -67,5 +69,5 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
-    }
+    }*/
 }
