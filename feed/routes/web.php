@@ -32,3 +32,6 @@ Route::get('noticia/', [
     'as' => 'noticia.detalhes',
     'uses' => 'NoticiaController@getNoticiaDetalhes'
 ]);
+Route::get('teste',function(){
+	echo 'TESTE';
+});
