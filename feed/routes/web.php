@@ -32,6 +32,14 @@ Route::get('noticia/', [
     'as' => 'noticia.detalhes',
     'uses' => 'NoticiaController@getNoticiaDetalhes'
 ]);
-Route::get('teste',function(){
-	echo 'TESTE';
-});
+Route::get('listarNoticia',[
+	'as'=> 'listarNoticias',
+	'uses'=> 'NoticiaController@listarNoticia']);
+
+Route::get('cadNoticia',[
+	'as'=> 'cadastrarNoticia',
+	'uses'=> 'NoticiaController@cadNoticia']);
+
+Route::post('salvarNoticia',[
+	'as'=>'salvarNoticia',
+	'uses'=>'NoticiaController@salvarNoticia']);

@@ -7,7 +7,9 @@
 
         <!-- Bootstrap Core CSS-->
         <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-
+        <script src="{{asset('js/jquery-3.2.0.min.js')}}"></script>
+        <script src="{{asset('js/dataTables/jquery.dataTables.js')}}"></script>
+        <script src="{{asset('js/dataTables/dataTables.bootstrap.js')}}"></script>
         <title>Laravel</title>
 
         <!-- Fonts -->
@@ -21,6 +23,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
+                    @include('layouts.messages')
+
                     @yield('conteudo')
                 </div>
             </div> 
@@ -37,3 +41,8 @@
 
     </body>
 </html>
+<script>
+    $(document).ready(function () {
+       $('#tabela_noticias').dataTable();
+            });
+    </script>
