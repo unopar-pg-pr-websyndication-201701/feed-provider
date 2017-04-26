@@ -32,15 +32,15 @@ Route::get('noticia/', [
     'as' => 'noticia.detalhes',
     'uses' => 'NoticiaController@getNoticiaDetalhes'
 ]);
-Route::get('listarNoticia',[
-	'as'=>'noticia.listar',
-	'uses'=>'NoticiaController@listarNoticias'
-]);
-Route::get('cadastrarNoticia',[
-	'as'=>'noticia.cadastrar',
-	'uses'=>'NoticiaController@cadastrarNoticia'
-]);
-Route::any('cadastraNoticia',[
-	'as'=>'noticia.form',
-	'uses'=>'NoticiaController@cadastroNoticia'
-]);
+Route::get('teste',function(){
+	echo 'TESTE';
+});
+
+//rotas categorias
+
+Route::get('/categorias','CategoriaController@listaCategorias');
+Route::get('/adicionar/categoria','CategoriaController@novaCategoria');
+Route::post('categoria/adiciona','CategoriaController@adicionarCategoria');
+Route::get('categorias/remove/{id}','CategoriaController@removerCategoria');
+Route::get('/categorias/editar/{id?}','CategoriaController@alterarCategoria');
+Route::post('categorias/salvar','CategoriaController@salvarCategoria');
