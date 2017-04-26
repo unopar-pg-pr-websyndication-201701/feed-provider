@@ -3,6 +3,7 @@
 namespace Feed\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Models\Categoria;
 
 class Noticia extends Model
 {
@@ -17,5 +18,4 @@ class Noticia extends Model
 		'data'
 	];
 
-	
 }

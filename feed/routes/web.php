@@ -43,3 +43,13 @@ Route::get('cadNoticia',[
 Route::post('salvarNoticia',[
 	'as'=>'salvarNoticia',
 	'uses'=>'NoticiaController@salvarNoticia']);
+
+Route::get('cadastrarNoticia',[
+	'as'=>'noticia.cadastrar',
+	'uses'=>'NoticiaController@cadastrarNoticia'
+]);
+Route::any('cadastraNoticia',[
+	'as'=>'noticia.form',
+	'uses'=>'NoticiaController@cadastroNoticia'
+]);
+
