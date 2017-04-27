@@ -1,17 +1,12 @@
 <?php
 
-namespace Feed;
+namespace Feed\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Categoria extends Model
 {
-    protected $fillable = [
-    	'nome'
-    ];
-
-    
-    public function noticias(){
-    	return $this->hasMany(Noticia::class);
-    }
+    protected $table='categorias';
+    protected $fillable= array('nome');
 }
+

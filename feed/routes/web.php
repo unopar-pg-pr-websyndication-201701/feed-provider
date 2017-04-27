@@ -53,3 +53,12 @@ Route::any('cadastraNoticia',[
 	'uses'=>'NoticiaController@cadastroNoticia'
 ]);
 
+//rotas categorias
+
+Route::get('/categorias','CategoriaController@listaCategorias');
+Route::get('/adicionar/categoria','CategoriaController@novaCategoria');
+Route::post('categoria/adiciona','CategoriaController@adicionarCategoria');
+Route::get('categorias/remove/{id}','CategoriaController@removerCategoria');
+Route::get('/categorias/editar/{id?}','CategoriaController@alterarCategoria');
+Route::post('categorias/salvar','CategoriaController@salvarCategoria');
+

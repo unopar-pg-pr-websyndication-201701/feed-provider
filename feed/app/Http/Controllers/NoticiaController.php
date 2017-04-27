@@ -9,7 +9,6 @@ use Feed\Models\Noticia;
 use Illuminate\Models\Categoria;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
-
 class NoticiaController extends Controller
 {
     /**
@@ -58,19 +57,5 @@ class NoticiaController extends Controller
         
          \Session::flash('mensagens-sucesso', 'Notícia cadastrada com sucesso');
         return redirect()->action('NoticiaController@listarNoticia')->with('mensagens-sucesso', 'Notícia cadastrada com sucesso!');
-    }
-
-    public function listarNoticias(){
-        return view('noticias.listarNoticias');
-    }
-    public function cadastrarNoticia(){
-        return view('noticias.cadastrarNoticia');
-    }
-
-    public function cadastroNoticia(Request $request){
-        $noticia=new Noticia;
-        $noticia=$request->all();
-     
-        $noticia->save();
     }
 }

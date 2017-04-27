@@ -11,4 +11,14 @@ use View;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+
+
+	public function __construct() {
+        $categorias = \Feed\Models\Categoria::all();
+
+        View::share ( 'categorias', $categorias );
+       
+    }
+
 }
