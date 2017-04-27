@@ -22,7 +22,7 @@
 			        <td>
 			        	<a href="" data-toggle="modal" data-target="#myModal" class="btn glyphicon glyphicon-eye-open"></a>
 			            <a href="" class="btn btn-primary btn-sm">editar</a>
-			            <a href="" class="btn btn-danger btn-sm">excluir</a>
+			            <a  onclick="confirmacao()" class="btn btn-danger btn-sm">excluir</a>
 			        </td>
 		    	</tr>
 		    @endforeach
@@ -32,4 +32,12 @@
                 @include('noticias.noticia-detalhes') <!-- , ['notic' => $noticia] -->
 	</div>		
 </div>
+<script type="text/javascript">
+	function confirmacao(){
+		var confirmacao=confirm('Confirma a exclusão da notícia?');
+		if(confirmacao){
+			location.href="excluiNoticia/{{$notice->id}}";
+		}
+	}
+</script>
 @stop

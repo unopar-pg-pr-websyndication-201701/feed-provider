@@ -58,4 +58,12 @@ class NoticiaController extends Controller
          \Session::flash('mensagens-sucesso', 'Notícia cadastrada com sucesso');
         return redirect()->action('NoticiaController@listarNoticia')->with('mensagens-sucesso', 'Notícia cadastrada com sucesso!');
     }
+
+    ///Exclusao de noticia 
+
+    public function excluirNoticia($id){
+        $models['noticia']=Noticia::find($id)->delete();
+        \Session::flash('mensagens-sucesso', 'Excluido com Sucesso');
+        return redirect()->action('NoticiaController@listarNoticia');
+    }
 }

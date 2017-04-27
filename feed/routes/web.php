@@ -53,6 +53,11 @@ Route::any('cadastraNoticia',[
 	'uses'=>'NoticiaController@cadastroNoticia'
 ]);
 
+Route::get('excluiNoticia/{id}',[
+	'as'=>'excluiNoticia',
+	'uses'=>'NoticiaController@excluirNoticia'
+]);
+
 //rotas categorias
 
 Route::get('/categorias','CategoriaController@listaCategorias');
