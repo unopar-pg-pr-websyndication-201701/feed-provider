@@ -6,7 +6,7 @@
   	@endif
   	<h2 class="page-header text-info">Noticias</h2>
     <div class="table-responsive">
-	  	<table class="table table-striped table-bordered table-hover" id="tabela_noticias">
+	  	<table class="table table-striped table-bordered table-hover" id="dataTables-example">
 	  		<thead>
 	  			<tr>
 		            <th>Data</th>
@@ -20,7 +20,7 @@
 			        <td>{{$notice->created_at}}</td>
 			        <td>{{$notice->titulo}}</td>
 			        <td>
-			        	<a href="" data-toggle="modal" data-target="#myModal" class="btn glyphicon glyphicon-eye-open"></a>
+			        	<a href="" data-toggle="modal" data-target="#myModal" class="btn btn-success glyphicon glyphicon-eye-open"></a>
 			            <a href="" class="btn btn-primary btn-sm">Editar</a>
 			            <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete-modal">Excluir</a>
 			        </td>
@@ -28,6 +28,8 @@
 		    @endforeach
 		    </tbody>
 		</table>
+		<!-- Inclui o arquivo de modal passando o objeto noticia por parametro para o arquivo incluido -->
+                @include('noticias.noticia-detalhes') <!-- , ['notic' => $noticia] -->
 	</div>		
 </div>
 @if(isset($notice))

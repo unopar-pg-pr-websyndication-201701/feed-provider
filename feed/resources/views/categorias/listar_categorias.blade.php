@@ -6,7 +6,7 @@
         @endif
     <h2 class="page-header text-info">Categorias</h2>
     <div class="table-responsive">
-        <table class="table table-striped table-bordered table-hover" id="tabela_noticias">
+        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
             <thead>
                 <tr>
                     <th>Código</th>
@@ -23,8 +23,8 @@
                             <a href="{{url('/categorias/editar/'.$c->id)}}" class="btn btn-primary btn-sm" alt="editar">Editar</a>
                             <a href="{{url('categoria/remover/'.$c->id)}}" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                         </td>
-                    @endforeach
-                    </tr>                                        
+                </tr> 
+                    @endforeach                                       
                 </tbody>
         </table>
     </div>
