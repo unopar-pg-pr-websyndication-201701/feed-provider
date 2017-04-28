@@ -7,33 +7,35 @@
   	<h2 class="page-header text-info">Cadastro de Noticias</h2>
 </div>
 <form method="POST" action="{{ route('salvarNoticia') }}" enctype="multipart/form-data">
-	<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+	<input type="hidden" name="_token" value="{{ csrf_token() }}" />
   <div class="form-group">
-    <label for="titulo">Titulo</label>
-    <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo">
+    <label for="titulo" class="col-sm-2 form-label">Titulo</label>
+    <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo" required="required">
   </div>
   <div class="form-group">
-    <label for="desc">Descrição</label>
-    <input type="text" class="form-control" id="desc" name="descricao" placeholder="Descrição">
+    <label for="desc" class="col-sm-2 form-label">Descrição</label>
+    <input type="text" class="form-control" id="desc" name="descricao" placeholder="Descrição" required="required">
   </div>
   <div class="form-group">
-  		<label for="conteudo">Conteudo</label>
-  		<textarea class="form-control" rows="3" id="conteudo" name="conteudo" placeholder="Conteudo"></textarea>
+  		<label for="conteudo" class="col-sm-2 form-label">Conteudo</label>
+  		<textarea class="form-control" rows="3" id="conteudo" name="conteudo" placeholder="Conteudo" required="required"></textarea>
   </div>
   <div class="form-group">
-    <label for="autor">Autor</label>
-    <input type="text" class="form-control" id="autor" name="autor" placeholder="Autor">
+    <label for="autor" class="col-sm-2 form-label">Autor</label>
+    <input type="text" class="form-control" id="autor" name="autor" placeholder="Autor" required="required">
   </div>
   <div class="form-group">
-    <label for="autor">Categoria</label>
-	  <select name="categoria_id">
-	  	<option value="1">teste</option>
-	  </select>
-   </div>
+    <label for="select_categoria" class="col-sm-2 form-label">Categorias</label>
+    <select name="categoria_id" id="select_categoria" class="form-control" required="required">
+      @foreach($listcategorias as $cat)
+        <option value="{{ $cat->id }}">{{ $cat->nome }}</option>
+      @endforeach
+    </select>
+  </div>
   <div class="form-group">
-    <label for="nome-imagem">Imagem</label>
+    <label for="nome-imagem" class="form-label">Imagem</label>
     <input type="file" id="nome-imagem" name="imagem_nome">
+    <button type="submit" class="btn btn-primary pull-right">Cadastrar Notícia</button>
   </div>
-  <button type="submit" class="btn btn-primary">Cadastrar</button>
 </form>
 @stop

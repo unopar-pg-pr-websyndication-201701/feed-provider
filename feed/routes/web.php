@@ -11,13 +11,10 @@
 |
 */
 
-/*<<<<<<< HEAD
 
 Route::get('/', function () {
     return view('home');
 });
-=======
->>>>>>> bef241fd4b67987b7a3892c0216091aaccad8c34*/
 
 Auth::routes();
 
@@ -44,14 +41,6 @@ Route::post('salvarNoticia',[
 	'as'=>'salvarNoticia',
 	'uses'=>'NoticiaController@salvarNoticia']);
 
-Route::get('cadastrarNoticia',[
-	'as'=>'noticia.cadastrar',
-	'uses'=>'NoticiaController@cadastrarNoticia'
-]);
-Route::any('cadastraNoticia',[
-	'as'=>'noticia.form',
-	'uses'=>'NoticiaController@cadastroNoticia'
-]);
 
 //rotas categorias
 
