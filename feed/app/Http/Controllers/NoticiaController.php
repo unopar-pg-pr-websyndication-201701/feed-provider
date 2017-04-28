@@ -9,8 +9,7 @@ use Feed\Models\Noticia;
 use Feed\Models\Categoria;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
-use Illuminate\Http\UploadedFile;
-//use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\Response;
 
 class NoticiaController extends Controller
 {
@@ -63,22 +62,24 @@ class NoticiaController extends Controller
         $url = preg_replace('/[^A-Za-z0-9_]/', '', $url);
         $noticia->url = $url;
         
-            if ($request->hasFile('imagem_nome')) {
-                $cam = $request->imagem_nome->storeAs('public',$url);
-                    $noticia->save();
-                    
-                    \Session::flash('mensagens-sucesso', 'Notícia cadastrada com sucesso');
-                return redirect()->action('NoticiaController@listarNoticia')->with('mensagens-sucesso', 'Notícia cadastrada com sucesso!');
+        $ext = $request->file('imagem_nome')->getClientOriginalExtension();
+            if ($ext != 'jpg' && $ext != 'png') {
+                return back()->with('mensagens_sucesso', 'Erro: Este arquivo não é uma imagem');
             }else{
+                $request->file('imagem_nome')->move('images/noticias/', $url.".".$request->file('imagem_nome')->getClientOriginalExtension());
+                $caminho = $url.".".$ext;
+                $noticia->imagem_nome = $caminho;
                 $noticia->save();
-                
-                \Session::flash('mensagens-sucesso', 'Notícia cadastrada com sucesso');
-                return redirect()->action('NoticiaController@listarNoticia')->with('mensagens-sucesso', 'Notícia cadastrada com sucesso e sem imagem!');
-            }
-        //$request['imagem_nome'] = ImagemController::setImagemFile($request['imagem_nome']);
-        //$noticia->imagem_nome = $request['imagem_nome'];
-        //$foto = $noticia->id.'.'.$request->file('imagem_nome')->getClientOriginalExtension();
-        //$request->file('imagem_nome')->move(base_path().'/public/images/noticias', $foto);
-        
+                \Session::flash('mensagens-sucesso', 'Cadastrada com Sucesso');
+                return redirect()->action('NoticiaController@listarNoticia')->with('mensagens-sucesso', 'Notícia Cadastrada com Sucesso!');
+            };
+    }
+
+    ///Exclusao de noticia 
+
+    public function excluirNoticia($id){
+        $models['noticia']=Noticia::find($id)->delete();
+        \Session::flash('mensagens-sucesso', 'Excluido com Sucesso');
+        return redirect()->action('NoticiaController@listarNoticia');
     }
 }

@@ -1,36 +1,34 @@
 @extends('principal')
-
 @section('conteudo') 
-
-
-    <table class="table">
-                <a href="{{ url ('/adicionar/categoria') }}" class="btn btn-primary">Nova Categoria</a>
-                <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>Nome Categoria</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-
-                @foreach ($categorias as $c)
-                    <tbody>
-                        <tr>
-
-                            <td class="primary">{{$c->id}}</td>
-                            <td class="primary">{{$c->nome}}</td>
-                            
-                            <td><a style="text-decoration:none;" href="{{url('/categorias/editar/'.$c->id)}}" class=" glyphicon glyphicon-pencil" alt="editar">Editar</a>
-                            <a style="text-decoration:none;" href="{{url('categoria/remover/'.$c->id)}}" class="glyphicon glyphicon-remove" data-toggle="modal" data-target="#delete-modal">Excluir</a></td>
-
-                        </tr>
-                                        
-                    </tbody>
-
-                @endforeach
-    </table>
-
-
+    <div class="panel-body">
+        @if(Session::has('mensagem_sucesso'))
+            {!! 'OK' !!}
+        @endif
+    <h2 class="page-header text-info">Categorias</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover" id="tabela_noticias">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome Categoria</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd gradeX">
+                    @foreach ($categorias as $c)
+                        <td>{{$c->id}}</td>
+                        <td>{{$c->nome}}</td>
+                        <td>
+                            <a href="{{url('/categorias/editar/'.$c->id)}}" class="btn btn-primary btn-sm" alt="editar">Editar</a>
+                            <a href="{{url('categoria/remover/'.$c->id)}}" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                        </td>
+                    @endforeach
+                    </tr>                                        
+                </tbody>
+        </table>
+    </div>
+</div>
 
     @if(isset($c))
     <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
@@ -42,7 +40,7 @@
                     
                 </div>  
                 <div class="modal-body">
-                   <h4 class="alert alert-danger" id="modalLabel">Deseja Excluir a Categoria</h4>
+                   <h4 class="alert alert-danger" id="modalLabel">Deseja Excluir a Categoria {{$c->nome}}</h4>
                 </div>
                 
                 <div class="modal-footer">
