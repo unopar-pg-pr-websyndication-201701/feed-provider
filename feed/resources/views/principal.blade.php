@@ -8,9 +8,7 @@
         <!-- Bootstrap Core CSS-->
         <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
         <script src="{{asset('js/jquery-3.2.0.min.js')}}"></script>
-        <script src="{{asset('js/dataTables/jquery.dataTables.js')}}"></script>
-        <script src="{{asset('js/dataTables/dataTables.bootstrap.js')}}"></script>
-        <title>Laravel</title>
+        <title>Feed de Notícias</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -38,11 +36,12 @@
 
         <!-- Bootstrap Core JavaScript -->
         <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
-
+        <script src="{{asset('js/dataTables/jquery.dataTables.js')}}"></script>
+        <script src="{{asset('js/dataTables/dataTables.bootstrap.js')}}"></script>
     </body>
 </html>
 <script>
     $(document).ready(function () {
-       $('#tabela_noticias').dataTable();
+       $('#dataTables-example').dataTable();
             });
     </script>
