@@ -14,7 +14,8 @@ class Noticia extends Model
 		'autor',
 		'categoria_id',
 		'imagem_nome',
-		'data'
+		'data',
+		'url'
 	];
 
 	public function categoria(){

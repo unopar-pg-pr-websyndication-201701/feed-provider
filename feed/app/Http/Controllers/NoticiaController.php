@@ -50,10 +50,12 @@ class NoticiaController extends Controller
         $noticia->autor = $request->autor;
         $noticia->url = base_path();
         $noticia->categoria_id = "1";
-        $noticia->save();
 
         $foto = $noticia->id.'.'.$request->file('imagem_nome')->getClientOriginalExtension();
         $request->file('imagem_nome')->move(base_path().'/public/images/noticias', $foto);
+
+        $noticia->imagem_nome = $foto;
+        $noticia->save();
         
          \Session::flash('mensagens-sucesso', 'Notícia cadastrada com sucesso');
         return redirect()->action('NoticiaController@listarNoticia')->with('mensagens-sucesso', 'Notícia cadastrada com sucesso!');

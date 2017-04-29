@@ -28,8 +28,7 @@
 		    @endforeach
 		    </tbody>
 		</table>
-			<!-- Inclui o arquivo de modal passando o objeto noticia por parametro para o arquivo incluido -->
-                @include('noticias.noticia-detalhes') <!-- , ['notic' => $noticia] -->
+			
 	</div>		
 </div>
 @stop
