@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
     <div class="container">
         @if (Route::has('login'))
             <ul class="nav navbar-nav ">

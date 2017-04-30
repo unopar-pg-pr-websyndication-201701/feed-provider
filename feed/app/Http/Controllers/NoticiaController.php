@@ -51,28 +51,26 @@ class NoticiaController extends Controller
         return view('noticias.cadNoticias',$noticias);
     }
 
-    function salvarNoticia(Request $request){
+    public function salvarNoticia(Request $request){
         $noticia = new Noticia();
         $noticia->titulo = $request->titulo;
         $noticia->descricao = $request->descricao;
         $noticia->conteudo = $request->conteudo;
         $noticia->autor = $request->autor;
+        $noticia->url = base_path().$request->titulo;
         $noticia->categoria_id = $request->categoria_id;
-        $url = $request->titulo;
-        $url = preg_replace('/[^A-Za-z0-9_]/', '', $url);
-        $noticia->url = $url;
+        $nome_foto = preg_replace(array("/(á|à|ã|â|ä)/","/(Á|À|Ã|Â|Ä)/","/(é|è|ê|ë)/","/(É|È|Ê|Ë)/","/(í|ì|î|ï)/","/(Í|Ì|Î|Ï)/","/(ó|ò|õ|ô|ö)/","/(Ó|Ò|Õ|Ô|Ö)/","/(ú|ù|û|ü)/","/(Ú|Ù|Û|Ü)/","/(ñ)/","/(Ñ)/"),explode(" ","a A e E i I o O u U n N"),$request->titulo);
+
+        $nome_foto = str_replace(" ", "", $nome_foto);
+
+        $foto = $request->file('imagem_nome')->getClientOriginalExtension();
+        $request->file('imagem_nome')->move(base_path().'/public/images/noticias', $nome_foto.'.'.$foto);
+
+        $noticia->imagem_nome = $nome_foto.'.'.$foto;
+        $noticia->save();
         
-        $ext = $request->file('imagem_nome')->getClientOriginalExtension();
-            if ($ext != 'jpg' && $ext != 'png') {
-                return back()->with('mensagens_sucesso', 'Erro: Este arquivo não é uma imagem');
-            }else{
-                $request->file('imagem_nome')->move('images/noticias/', $url.".".$request->file('imagem_nome')->getClientOriginalExtension());
-                $caminho = $url.".".$ext;
-                $noticia->imagem_nome = $caminho;
-                $noticia->save();
-                \Session::flash('mensagens-sucesso', 'Cadastrada com Sucesso');
-                return redirect()->action('NoticiaController@listarNoticia')->with('mensagens-sucesso', 'Notícia Cadastrada com Sucesso!');
-            };
+         \Session::flash('mensagens-sucesso', 'Notícia cadastrada com sucesso');
+        return redirect()->action('NoticiaController@listarNoticia')->with('mensagens-sucesso', 'Notícia cadastrada com sucesso!');
     }
 
     ///Exclusao de noticia 

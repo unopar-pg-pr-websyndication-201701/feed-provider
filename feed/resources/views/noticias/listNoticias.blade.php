@@ -16,11 +16,11 @@
 		    </thead>
 		    <tbody>
 		    	<tr class="odd gradeX">
-			    	@foreach($listnoticias as $notice)
-			        <td>{{$notice->created_at}}</td>
-			        <td>{{$notice->titulo}}</td>
+			    	@foreach($listnoticias as $noticia)
+			        <td>{{$noticia->created_at}}</td>
+			        <td>{{$noticia->titulo}}</td>
 			        <td>
-			        	<a href="" data-toggle="modal" data-target="" class="btn btn-success glyphicon glyphicon-eye-open"></a>
+			        	<a href="" data-toggle="modal" data-target="#modal{{$noticia->id}}" class="btn btn-success glyphicon glyphicon-eye-open"></a>
 			            <a href="" class="btn btn-primary btn-sm">Editar</a>
 			            <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete-modal">Excluir</a>
 			        </td>
@@ -28,9 +28,11 @@
 		    @endforeach
 		    </tbody>
 		</table>
+		<!-- Inclui o arquivo de modal passando o objeto noticia por parametro para o arquivo incluido -->
+                @include('noticias.noticia-detalhes', ['notic' => $noticia])
 	</div>		
 </div>
-@if(isset($notice))
+@if(isset($noticia))
     <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -42,7 +44,7 @@
                    <h4 class="alert alert-danger" id="modalLabel">Deseja Excluir a Categoria</h4>
                 </div>
                 <div class="modal-footer">
-                    <a href="{{action('NoticiaController@excluirNoticia',$notice->id)}}" title="Confirmar" class="btn btn-success ">Sim</a>
+                    <a href="{{action('NoticiaController@excluirNoticia',$noticia->id)}}" title="Confirmar" class="btn btn-success ">Sim</a>
                 	<a href="{{ route('listarNoticias') }}" title="Cancelar" class="btn btn-danger ">Não</a>
                 </div>   
             </div>
