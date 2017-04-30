@@ -10,6 +10,7 @@ use Feed\Models\Categoria;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Symfony\Component\HttpFoundation\Response;
+use DB;
 
 class NoticiaController extends Controller
 {
@@ -43,6 +44,8 @@ class NoticiaController extends Controller
 
     public function listarNoticia(){
         $noticias['listnoticias'] = Noticia::all();
+        $noticias['quantas_categorias'] = DB::table('categorias')
+        ->select(DB::raw('count(*) as id'));
         return view('noticias.listNoticias', $noticias);
     }
 

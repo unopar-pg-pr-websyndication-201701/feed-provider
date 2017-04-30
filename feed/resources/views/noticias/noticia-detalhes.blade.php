@@ -10,7 +10,10 @@
             <li>{{$notic->titulo}}</li>
           </ol>
         </h4>
-        <p>{{$notic->descricao}}</p>
+        <p>
+          {{$notic->descricao}}
+          <span class="label label-default pull-right">{{ date( 'd / m / Y', strtotime($noticia->created_at))}}</span>
+        </p>
       </div>
       <div class="modal-body">
           <img src="/images/noticias/{{$notic->imagem_nome}}" alt="{{$notic->imagem_nome}}" style="width: 280px; height: 200px; padding:5px 5px 5px 5px;">

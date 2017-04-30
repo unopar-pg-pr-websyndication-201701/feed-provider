@@ -17,7 +17,7 @@
 		    <tbody>
 		    	<tr class="odd gradeX">
 			    	@foreach($listnoticias as $noticia)
-			        <td>{{$noticia->created_at}}</td>
+			        <td>{{date( 'd / m / Y', strtotime($noticia->created_at))}}</td>
 			        <td>{{$noticia->titulo}}</td>
 			        <td>
 			        	<a href="" data-toggle="modal" data-target="#modal{{$noticia->id}}" class="btn btn-success glyphicon glyphicon-eye-open"></a>
@@ -32,7 +32,7 @@
                 @include('noticias.noticia-detalhes', ['notic' => $noticia])
 	</div>		
 </div>
-@if(isset($noticia))
+@if(isset($noticia->id))
     <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -41,7 +41,7 @@
                     <span aria-hidden="true">&times;</span></button> 
                 </div>  
                 <div class="modal-body">
-                   <h4 class="alert alert-danger" id="modalLabel">Deseja Excluir a Categoria</h4>
+                   <h4 class="alert alert-danger" id="modalLabel">Deseja Excluir a Noticia</h4>
                 </div>
                 <div class="modal-footer">
                     <a href="{{action('NoticiaController@excluirNoticia',$noticia->id)}}" title="Confirmar" class="btn btn-success ">Sim</a>
