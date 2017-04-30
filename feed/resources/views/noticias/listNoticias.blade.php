@@ -20,7 +20,7 @@
 			        <td>{{$notice->created_at}}</td>
 			        <td>{{$notice->titulo}}</td>
 			        <td>
-			        	<a href="" data-toggle="modal" data-target="#myModal" class="btn btn-success glyphicon glyphicon-eye-open"></a>
+			        	<a href="" data-toggle="modal" data-target="" class="btn btn-success glyphicon glyphicon-eye-open"></a>
 			            <a href="" class="btn btn-primary btn-sm">Editar</a>
 			            <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete-modal">Excluir</a>
 			        </td>
@@ -28,8 +28,6 @@
 		    @endforeach
 		    </tbody>
 		</table>
-		<!-- Inclui o arquivo de modal passando o objeto noticia por parametro para o arquivo incluido -->
-                @include('noticias.noticia-detalhes') <!-- , ['notic' => $noticia] -->
 	</div>		
 </div>
 @if(isset($notice))
@@ -39,19 +37,13 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span></button> 
-                    
                 </div>  
                 <div class="modal-body">
-                   <h4 class="alert alert-danger" id="modalLabel">Deseja Excluir a Categoria {{$notice->titulo}}</h4>
+                   <h4 class="alert alert-danger" id="modalLabel">Deseja Excluir a Categoria</h4>
                 </div>
-                
                 <div class="modal-footer">
-                    
-                    
                     <a href="{{action('NoticiaController@excluirNoticia',$notice->id)}}" title="Confirmar" class="btn btn-success ">Sim</a>
-                    <a href="{{ route('listarNoticias') }}" title="Cancelar" class="btn btn-danger ">Não</a>
-                       
-                    
+                	<a href="{{ route('listarNoticias') }}" title="Cancelar" class="btn btn-danger ">Não</a>
                 </div>   
             </div>
         </div>

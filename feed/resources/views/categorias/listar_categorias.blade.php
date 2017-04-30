@@ -17,8 +17,8 @@
             <tbody>
                 <tr class="odd gradeX">
                     @foreach ($categorias as $c)
-                        <td>{{$c->id}}</td>
-                        <td>{{$c->nome}}</td>
+                        <td class="primary">{{$c->id}}</td>
+                        <td class="primary">{{$c->nome}}</td>
                         <td>
                             <a href="{{url('/categorias/editar/'.$c->id)}}" class="btn btn-primary btn-sm" alt="editar">Editar</a>
                             <a href="{{url('categoria/remover/'.$c->id)}}" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete-modal">Excluir</a>
@@ -40,7 +40,7 @@
                     
                 </div>  
                 <div class="modal-body">
-                   <h4 class="alert alert-danger" id="modalLabel">Deseja Excluir a Categoria {{$c->nome}}</h4>
+                   <h4 class="alert alert-danger" id="modalLabel">Deseja Excluir a Categoria</h4>
                 </div>
                 
                 <div class="modal-footer">
