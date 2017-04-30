@@ -60,9 +60,11 @@ class NoticiaController extends Controller
 <<<<<<< HEAD
         $noticia->url = base_path();
         $noticia->categoria_id = "1";
+        $noticia->save();
 
         $foto = $noticia->id.'.'.$request->file('imagem_nome')->getClientOriginalExtension();
         $request->file('imagem_nome')->move(base_path().'/public/images/noticias', $foto);
+<<<<<<< HEAD
 
         $noticia->imagem_nome = $foto;
         $noticia->save();
@@ -72,6 +74,8 @@ class NoticiaController extends Controller
         $url = preg_replace('/[^A-Za-z0-9_]/', '', $url);
         $noticia->url = $url;
 >>>>>>> e868b4ed3b6d9a6e6fde640558dd53d27cfc830b
+=======
+>>>>>>> parent of c3f72a5... Listagem do feed de forma dinamica, e listando por data mais recente
         
         $ext = $request->file('imagem_nome')->getClientOriginalExtension();
             if ($ext != 'jpg' && $ext != 'png') {

@@ -4,8 +4,6 @@ namespace Feed\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Carbon\Carbon;
-use Feed\Models\Noticia;
-
 
 class FeedController extends Controller
 {
@@ -31,14 +29,15 @@ class FeedController extends Controller
 
     {
         /*
-           Essa consulta serve para pegar somente as noticias dos ultimos dois meses. Isso será testado quando estiverem prontos os CRUDs.
+            Deixei comentado para nao dar problema na execução. Essa consulta serve para pegar somente as noticias dos ultimos dois meses. Isso será testado quando estiverem prontos os CRUDs.
+
+            Por: Eliezer Borges
+
+            $data['noticias'] = \Shoppvel\Models\Noticia::where("created_at",">", Carbon::now()->subMonths(2))->get()->orderBy('created_at','desc')->paginate(5);
+
         */
 
-        $data['noticias'] = Noticia::where("created_at",">", Carbon::now()->subMonths(2))->orderBy('created_at', 'desc')->get();
-
-        //dd($data['noticias']);
-
-        return view('feed', $data);
+        return view('feed');
 
     }
 }
