@@ -28,17 +28,6 @@
 		    @endforeach
 		    </tbody>
 		</table>
-<<<<<<< HEAD
-<<<<<<< HEAD
-			
-=======
-		<!-- Inclui o arquivo de modal passando o objeto noticia por parametro para o arquivo incluido -->
-                @include('noticias.noticia-detalhes') <!-- , ['notic' => $noticia] -->
->>>>>>> e868b4ed3b6d9a6e6fde640558dd53d27cfc830b
-=======
-			<!-- Inclui o arquivo de modal passando o objeto noticia por parametro para o arquivo incluido -->
-                @include('noticias.noticia-detalhes') <!-- , ['notic' => $noticia] -->
->>>>>>> parent of c3f72a5... Listagem do feed de forma dinamica, e listando por data mais recente
 	</div>		
 </div>
 @if(isset($notice))
