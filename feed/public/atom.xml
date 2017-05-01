@@ -7,6 +7,11 @@
     <name/>
   </author>
   <entry>
+    <link href="/var/www/html/feed-provider/feedMais um teste"/>
+    <title>Mais um teste</title>
+    <content>testando mais uma</content>
+  </entry>
+  <entry>
     <link href="/var/www/html/Dropbox/feed-provider/feedTeste Eliezer 2"/>
     <title>Teste Eliezer 2</title>
     <content>Teste Eliezer 2</content>

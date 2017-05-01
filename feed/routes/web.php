@@ -30,6 +30,12 @@ Route::get('atom/gerar', [
     'uses' => 'AtomController@gerarAtom'
 ]);
 
+Route::get('atom', [
+    'as' => 'atom',
+    'uses' => 'AtomController@mostrarAtom'
+]);
+
+
 
 Route::get('noticia/', [
     'as' => 'noticia.detalhes',
