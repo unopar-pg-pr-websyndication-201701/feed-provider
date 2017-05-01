@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title/>
+  <link rel="self"/>
+  <id/>
+  <author>
+    <name/>
+  </author>
+  <entry>
+    <link href="/var/www/html/Dropbox/feed-provider/feedTeste Eliezer 2"/>
+    <title>Teste Eliezer 2</title>
+    <content>Teste Eliezer 2</content>
+  </entry>
+  <entry>
+    <link href="/var/www/html/Dropbox/feed-provider/feedTeste Eliezer"/>
+    <title>Teste Eliezer</title>
+    <content>Teste Eliezer</content>
+  </entry>
+  <entry>
+    <link href="/var/www/html/feed/feed-provider/feedTitulo 13"/>
+    <title>Titulo 13</title>
+    <content>descricao 13</content>
+  </entry>
+  <entry>
+    <link href="Testedetitulo9"/>
+    <title>Teste de titulo 9</title>
+    <content>descricao da noticia 9</content>
+  </entry>
+</feed>

@@ -25,10 +25,17 @@ Route::get('feed', [
     'uses' => 'FeedController@getFeed'
 ]);
 
+Route::get('atom/gerar', [
+    'as' => 'atom.gerar',
+    'uses' => 'AtomController@gerarAtom'
+]);
+
+
 Route::get('noticia/', [
     'as' => 'noticia.detalhes',
     'uses' => 'NoticiaController@getNoticiaDetalhes'
 ]);
+
 Route::get('listarNoticia',[
 	'as'=> 'listarNoticias',
 	'uses'=> 'NoticiaController@listarNoticia']);

@@ -238,28 +238,7 @@
         },
         {
             "name": "laravel/framework",
-<<<<<<< HEAD
             "version": "v5.4.21",
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            "version": "v5.4.21",
-=======
-            "version": "v5.4.19",
->>>>>>> parent of c3f72a5... Listagem do feed de forma dinamica, e listando por data mais recente
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/framework.git",
-                "reference": "02444b7450350db17a7607c8a52f7268ebdb0dad"
-            },
-            "dist": {
-                "type": "zip",
-<<<<<<< HEAD
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2ed668f96d1a6ca42f50d5c87ee9ceecfc0a6eee",
-                "reference": "2ed668f96d1a6ca42f50d5c87ee9ceecfc0a6eee",
-=======
-            "version": "v5.4.20",
->>>>>>> ecdc5bfbaa815cc9ed9fb2612d364d356ec25904
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
@@ -267,18 +246,8 @@
             },
             "dist": {
                 "type": "zip",
-<<<<<<< HEAD
                 "url": "https://api.github.com/repos/laravel/framework/zipball/2ed668f96d1a6ca42f50d5c87ee9ceecfc0a6eee",
                 "reference": "2ed668f96d1a6ca42f50d5c87ee9ceecfc0a6eee",
-=======
-                "url": "https://api.github.com/repos/laravel/framework/zipball/851aad458bcc904178ded02954d55d36c2c35f8b",
-                "reference": "851aad458bcc904178ded02954d55d36c2c35f8b",
->>>>>>> e868b4ed3b6d9a6e6fde640558dd53d27cfc830b
-=======
-                "url": "https://api.github.com/repos/laravel/framework/zipball/02444b7450350db17a7607c8a52f7268ebdb0dad",
-                "reference": "02444b7450350db17a7607c8a52f7268ebdb0dad",
->>>>>>> parent of c3f72a5... Listagem do feed de forma dinamica, e listando por data mais recente
->>>>>>> ecdc5bfbaa815cc9ed9fb2612d364d356ec25904
                 "shasum": ""
             },
             "require": {
@@ -394,19 +363,7 @@
                 "framework",
                 "laravel"
             ],
-<<<<<<< HEAD
             "time": "2017-04-28 15:40:01"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            "time": "2017-04-28 15:40:01"
-=======
-            "time": "2017-04-27 13:04:35"
->>>>>>> e868b4ed3b6d9a6e6fde640558dd53d27cfc830b
-=======
-            "time": "2017-04-16 13:33:34"
->>>>>>> parent of c3f72a5... Listagem do feed de forma dinamica, e listando por data mais recente
->>>>>>> ecdc5bfbaa815cc9ed9fb2612d364d356ec25904
         },
         {
             "name": "laravel/tinker",

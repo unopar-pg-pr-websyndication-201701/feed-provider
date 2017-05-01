@@ -6,6 +6,7 @@
             </ul>
     
             <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{route('atom.gerar')}}" class="btn btn-danger">Gerar Atom</a></li>
                 @if (Auth::guest())
                     <li><a href="{{ route('login') }}">Acessar</a></li>
                 @else
