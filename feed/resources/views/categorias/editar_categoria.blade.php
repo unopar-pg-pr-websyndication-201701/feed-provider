@@ -14,18 +14,6 @@
         </div>         
     {{Form::close()}}
 
-    <div class="erros_formulario" style="margin-top:150px;">
-
-        @if (count($errors) > 0)
-            <strong style="color:red;">Erros No Formulário:</strong>
-                <div class="alert alert-danger fade in" style="margin-top:10px;">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-        @endif
-    </div>
+    
 </div>
 @stop
