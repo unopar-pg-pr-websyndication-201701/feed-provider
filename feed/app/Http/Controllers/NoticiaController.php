@@ -54,17 +54,21 @@ class NoticiaController extends Controller
         return view('noticias.cadNoticias',$noticias);
     }
 
+    public function limpaVariavel($var){
+        $novo = preg_replace(array("/(á|à|ã|â|ä)/","/(Á|À|Ã|Â|Ä)/","/(é|è|ê|ë)/","/(É|È|Ê|Ë)/","/(í|ì|î|ï)/","/(Í|Ì|Î|Ï)/","/(ó|ò|õ|ô|ö)/","/(Ó|Ò|Õ|Ô|Ö)/","/(ú|ù|û|ü)/","/(Ú|Ù|Û|Ü)/","/(ñ)/","/(Ñ)/"),explode(" ","a A e E i I o O u U n N"),$var);
+        $novo = str_replace(" ", "", $novo);
+        return $novo;
+    }
+
     public function salvarNoticia(Request $request){
         $noticia = new Noticia();
         $noticia->titulo = $request->titulo;
         $noticia->descricao = $request->descricao;
         $noticia->conteudo = $request->conteudo;
         $noticia->autor = $request->autor;
-        $noticia->url = base_path().$request->titulo;
+        $noticia->url = NoticiaController::limpaVariavel($request->titulo);
         $noticia->categoria_id = $request->categoria_id;
-        $nome_foto = preg_replace(array("/(á|à|ã|â|ä)/","/(Á|À|Ã|Â|Ä)/","/(é|è|ê|ë)/","/(É|È|Ê|Ë)/","/(í|ì|î|ï)/","/(Í|Ì|Î|Ï)/","/(ó|ò|õ|ô|ö)/","/(Ó|Ò|Õ|Ô|Ö)/","/(ú|ù|û|ü)/","/(Ú|Ù|Û|Ü)/","/(ñ)/","/(Ñ)/"),explode(" ","a A e E i I o O u U n N"),$request->titulo);
-
-        $nome_foto = str_replace(" ", "", $nome_foto);
+        $nome_foto = NoticiaController::limpaVariavel($request->titulo);
 
         $foto = $request->file('imagem_nome')->getClientOriginalExtension();
         $request->file('imagem_nome')->move(base_path().'/public/images/noticias', $nome_foto.'.'.$foto);
