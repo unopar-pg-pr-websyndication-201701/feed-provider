@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title/>
+    <link/>
+    <description/>
+    <language/>
+    <image>
+      <title/>
+      <url/>
+      <link/>
+    </image>
+    <item>
+      <link href="noticia/Titulo16"/>
+      <title>Titulo 16</title>
+      <description>Descrição 16</description>
+    </item>
+    <item>
+      <link href="Titulo15"/>
+      <title>Titulo 15</title>
+      <description>Descricao 15</description>
+    </item>
+    <item>
+      <link href="Testedetitulo9"/>
+      <title>Teste de titulo 9</title>
+      <description>descricao da noticia 9</description>
+    </item>
+  </channel>
+</rss>

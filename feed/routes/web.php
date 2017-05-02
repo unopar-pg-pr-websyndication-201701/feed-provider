@@ -16,6 +16,8 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/noticia/{$url?}', 'NoticiaController@exibirNoticia');
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
@@ -29,6 +31,21 @@ Route::get('atom/gerar', [
     'as' => 'atom.gerar',
     'uses' => 'AtomController@gerarAtom'
 ]);
+Route::get('rss/gerar', [
+    'as' => 'rss.gerar',
+    'uses' => 'RSSController@gerarRSS'
+]);
+
+
+Route::get('atom', [
+    'as' => 'atom',
+    'uses' => 'AtomController@mostrarAtom'
+]);
+Route::get('RSS', [
+    'as' => 'RSS',
+    'uses' => 'RSSController@mostrarRSS'
+]);
+
 
 
 Route::get('noticia/', [

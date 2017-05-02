@@ -3,10 +3,12 @@
         @if (Route::has('login'))
             <ul class="nav navbar-nav ">
                 <li><a href="{{ url('/') }}" class="navbar-brand">Início</a></li>
+                <li><a href="{{ route('cadastrarNoticia') }}">Criar Notícia</a></li>
             </ul>
     
             <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{route('atom.gerar')}}" class="btn btn-danger">Gerar Atom</a></li>
+                    <li><a href="{{route('atom.gerar')}}" class="btn btn-danger">Gerar Atom</a></li>                    
+                    <li><a href="{{route('rss.gerar')}}" class="btn btn-danger">Gerar RSS</a></li>
                 @if (Auth::guest())
                     <li><a href="{{ route('login') }}">Acessar</a></li>
                 @else

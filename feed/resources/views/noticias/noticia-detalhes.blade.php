@@ -1,3 +1,4 @@
+@if(isset($notic))
 <!-- Modal -->
 <div class="modal fade" id="modal{{$notic->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -27,3 +28,6 @@
     </div>
   </div>
 </div>
+@else
+    @include ('errors.404');
+@endif

@@ -36,16 +36,16 @@ class NoticiaController extends Controller
         return view('noticias.noticia-detalhes');
     }
 
-    public function exibirNoticia($id){
-        $noticia = Noticia::findOrFail($id);
-        $return['noticia'] = $noticia;
+    public function exibirNoticia($url){
+        $sql = 'SELECT * FROM noticias WHERE url='.$url;
+        DB::statement($sql);
+        //$noticia = Noticia::findOrFail($url);
+        $return['noticia'] = $sql;
         return view('noticias.exibe-noticia',$return);
     }
 
     public function listarNoticia(){
         $noticias['listnoticias'] = Noticia::all();
-        $noticias['quantas_categorias'] = DB::table('categorias')
-        ->select(DB::raw('count(*) as id'));
         return view('noticias.listNoticias', $noticias);
     }
 
@@ -66,7 +66,7 @@ class NoticiaController extends Controller
         $noticia->descricao = $request->descricao;
         $noticia->conteudo = $request->conteudo;
         $noticia->autor = $request->autor;
-        $noticia->url = NoticiaController::limpaVariavel($request->titulo);
+        $noticia->url = "noticia/".NoticiaController::limpaVariavel($request->titulo);
         $noticia->categoria_id = $request->categoria_id;
         $nome_foto = NoticiaController::limpaVariavel($request->titulo);
 
