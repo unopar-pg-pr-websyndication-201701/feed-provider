@@ -7,18 +7,9 @@
     <name/>
   </author>
   <entry>
-    <link href="/noticia/Titulo23"/>
-    <title>Titulo 23</title>
-    <content>descrição 23</content>
+    <link href="/noticia/Titulo24"/>
+    <title>Titulo 24</title>
+    <content>descrição 24</content>
   </entry>
-  <entry>
-    <link href="http://localhost:8000/noticia/Titulo22"/>
-    <title>Titulo 22</title>
-    <content>Descrição 22</content>
-  </entry>
-  <entry>
-    <link href="http://localhost:8000/noticia/Titulo21"/>
-    <title>Titulo 21</title>
-    <content>Descrição 21</content>
-  </entry>
+  <pubDate>2017-05-02 20:11:31</pubDate>
 </feed>
