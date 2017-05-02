@@ -89,6 +89,10 @@ class RSSController extends Controller
             $linkItem->setAttribute('href','http://'.$_SERVER['HTTP_HOST'].$noticia->url.'');
             $linkItem = $item->appendChild($linkItem);
 
+            //Elemento <pubDate>
+            $pubDate = $xmlDoc->createElement('pubDate', $noticia->created_at);
+            $pubDate = $item->appendChild($pubDate);
+
             $titleItem = $xmlDoc->createElement('title', $noticia->titulo);
             $titleItem = $item->appendChild($titleItem);
 
