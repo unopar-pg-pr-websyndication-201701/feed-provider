@@ -87,10 +87,9 @@ class NoticiaController extends Controller
        return view('noticias.editNoticia',$noticias);
     }
 
-    public function updateNoticia(Request $request , $id){
-        echo 'teste';
+    public function updateNoticia(Request $request){
         $data = $request->all();
-        
+        $id = $request->id;
         if(Noticia::find($id)->update($data)){
            return redirect()->action('NoticiaController@listarNoticia')->with('mensagens-sucesso', 'Notícia atualizada com Sucesso!');
        } else {

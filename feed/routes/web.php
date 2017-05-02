@@ -29,6 +29,21 @@ Route::get('atom/gerar', [
     'as' => 'atom.gerar',
     'uses' => 'AtomController@gerarAtom'
 ]);
+Route::get('rss/gerar', [
+    'as' => 'rss.gerar',
+    'uses' => 'RSSController@gerarRSS'
+]);
+
+
+Route::get('atom', [
+    'as' => 'atom',
+    'uses' => 'AtomController@mostrarAtom'
+]);
+Route::get('RSS', [
+    'as' => 'RSS',
+    'uses' => 'RSSController@mostrarRSS'
+]);
+
 
 
 Route::get('noticia/', [
@@ -51,17 +66,15 @@ Route::post('salvarNoticia',[
 
 Route::get('excluiNoticia/{id}',[
 	'as'=>'excluiNoticia',
-	'uses'=>'NoticiaController@excluirNoticia'
-]);
+	'uses'=>'NoticiaController@excluirNoticia']);
 
 Route::get('editarNoticia/{id}',[
 	'as'=>'editNoticia',
-	'uses'=>'NoticiaController@editarNoticia'
-]);
-Route::post('updateNoticia/{id}',[
+	'uses'=>'NoticiaController@editarNoticia']);
+
+Route::post('updateNoticia',[
 	'as'=>'updateNoticia',
-	'uses'=>'NoticiaController@updateNoticia'
-]);
+	'uses'=>'NoticiaController@updateNoticia']);
 
 //rotas categorias
 

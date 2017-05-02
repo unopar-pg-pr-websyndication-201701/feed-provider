@@ -91,4 +91,16 @@ class AtomController extends Controller
             ->with('mensagens-sucesso', 'Feed Atom Gerado com Sucesso !!!');
     }
 
+    function mostrarAtom(){
+
+        $this->gerarAtom();
+
+        $xmlDoc = new \DOMDocument('1.0','utf-8');
+        $atom = Storage::disk('public')->get('atom.xml');
+        $xmlDoc->load(base_path().'/public/atom.xml');
+        print $xmlDoc->saveXML();
+        header("Content-Type: text/xml");
+        die();
+    }
+
 }
