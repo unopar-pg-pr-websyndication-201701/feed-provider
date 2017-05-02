@@ -57,6 +57,7 @@ class AtomController extends Controller
         $id = $xmlDoc->createElement('id');
         $id = $xmlATOM->appendChild($id);
 
+        
         //Elemento <author>
         $author = $xmlDoc->createElement('author');
         $author = $xmlATOM->appendChild($author);
@@ -79,6 +80,9 @@ class AtomController extends Controller
 
             $contentE = $xmlDoc->createElement('content', $noticia->descricao);
             $contentE = $entry->appendChild($contentE);
+
+            $pubDate = $xmlDoc->createElement('pubDate', $noticia->created_at);
+            $pubDate = $entry->appendChild($pubDate);
 
         }
 
