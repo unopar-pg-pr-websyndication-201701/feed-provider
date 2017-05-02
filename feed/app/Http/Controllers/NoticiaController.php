@@ -33,13 +33,12 @@ class NoticiaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function getNoticiaDetalhes(){
-        return view('noticias.noticia-detalhes');
+        return view('noticias.exibe-noticia');
     }
 
     public function exibirNoticia($url){
-        $sql = 'SELECT * FROM noticias WHERE url='.$url;
-        DB::statement($sql);
-        //$noticia = Noticia::findOrFail($url);
+        $url = "/noticia/".$url;
+        $sql = DB::select('select * from noticias where url = :url', ['url' => $url]);
         $return['noticia'] = $sql;
         return view('noticias.exibe-noticia',$return);
     }
@@ -66,7 +65,7 @@ class NoticiaController extends Controller
         $noticia->descricao = $request->descricao;
         $noticia->conteudo = $request->conteudo;
         $noticia->autor = $request->autor;
-        $noticia->url = "noticia/".NoticiaController::limpaVariavel($request->titulo);
+        $noticia->url = "/noticia/".NoticiaController::limpaVariavel($request->titulo);
         $noticia->categoria_id = $request->categoria_id;
         $nome_foto = NoticiaController::limpaVariavel($request->titulo);
 

@@ -16,7 +16,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/noticia/{$url?}', 'NoticiaController@exibirNoticia');
+Route::get('/noticia/{url}', [
+    'uses' => 'NoticiaController@exibirNoticia']);
 
 Auth::routes();
 
@@ -47,11 +48,6 @@ Route::get('RSS', [
 ]);
 
 
-
-Route::get('noticia/', [
-    'as' => 'noticia.detalhes',
-    'uses' => 'NoticiaController@getNoticiaDetalhes'
-]);
 
 Route::get('listarNoticia',[
 	'as'=> 'listarNoticias',
