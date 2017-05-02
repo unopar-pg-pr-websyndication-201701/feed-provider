@@ -7,6 +7,7 @@
     <name/>
   </author>
   <entry>
+<<<<<<< HEAD
     <link href="Titulo15"/>
     <title>Titulo 15</title>
     <content>Descricao 15</content>
@@ -15,5 +16,20 @@
     <link href="Testedetitulo9"/>
     <title>Teste de titulo 9</title>
     <content>descricao da noticia 9</content>
+=======
+    <link href="/var/www/html/feed/feed-provider/feedlllllllllllllll"/>
+    <title>lllllllllllllll</title>
+    <content>llllllllllllll</content>
+  </entry>
+  <entry>
+    <link href="/var/www/html/feed/feed-provider/feedrrrrrrrrrrrrr"/>
+    <title>rrrrrrrrrrrrr</title>
+    <content>rrrrrrrrrrrrrrrrrrr</content>
+  </entry>
+  <entry>
+    <link href="/var/www/html/feed/feed-provider/feedddddddddddddddd"/>
+    <title>ddddddddddddddd</title>
+    <content>ddddddddddddddddd</content>
+>>>>>>> eba9b27751d1518f42908f2a6a2bc7d7ad1197bc
   </entry>
 </feed>

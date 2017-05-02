@@ -11,6 +11,7 @@
       <link/>
     </image>
     <item>
+<<<<<<< HEAD
       <link href="noticia/Titulo16"/>
       <title>Titulo 16</title>
       <description>Descrição 16</description>
@@ -24,6 +25,21 @@
       <link href="Testedetitulo9"/>
       <title>Teste de titulo 9</title>
       <description>descricao da noticia 9</description>
+=======
+      <link href="/var/www/html/feed/feed-provider/feedlllllllllllllll"/>
+      <title>lllllllllllllll</title>
+      <description>llllllllllllll</description>
+    </item>
+    <item>
+      <link href="/var/www/html/feed/feed-provider/feedrrrrrrrrrrrrr"/>
+      <title>rrrrrrrrrrrrr</title>
+      <description>rrrrrrrrrrrrrrrrrrr</description>
+    </item>
+    <item>
+      <link href="/var/www/html/feed/feed-provider/feedddddddddddddddd"/>
+      <title>ddddddddddddddd</title>
+      <description>ddddddddddddddddd</description>
+>>>>>>> eba9b27751d1518f42908f2a6a2bc7d7ad1197bc
     </item>
   </channel>
 </rss>

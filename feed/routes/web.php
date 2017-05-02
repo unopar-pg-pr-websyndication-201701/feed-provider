@@ -68,8 +68,15 @@ Route::post('salvarNoticia',[
 
 Route::get('excluiNoticia/{id}',[
 	'as'=>'excluiNoticia',
-	'uses'=>'NoticiaController@excluirNoticia'
-]);
+	'uses'=>'NoticiaController@excluirNoticia']);
+
+Route::get('editarNoticia/{id}',[
+	'as'=>'editNoticia',
+	'uses'=>'NoticiaController@editarNoticia']);
+
+Route::post('updateNoticia',[
+	'as'=>'updateNoticia',
+	'uses'=>'NoticiaController@updateNoticia']);
 
 //rotas categorias
 
