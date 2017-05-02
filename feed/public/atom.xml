@@ -7,6 +7,11 @@
     <name/>
   </author>
   <entry>
+    <link href="/home/rodrigo/feed-provider/feedteste cat"/>
+    <title>teste cat</title>
+    <content>cat</content>
+  </entry>
+  <entry>
     <link href="/var/www/html/feed-provider/feedMais um teste"/>
     <title>Mais um teste</title>
     <content>testando mais uma</content>

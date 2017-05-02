@@ -106,4 +106,15 @@ class RSSController extends Controller
             ->with('mensagens-sucesso', 'Feed RSS Gerado com Sucesso !!!');
     }
 
+    function mostrarRSS(){
+
+        $this->gerarRSS();
+
+        $xmlDoc = new \DOMDocument('1.0','utf-8');
+        $RSS = Storage::disk('public')->get('RSS.xml');
+        $xmlDoc->load(base_path().'/public/RSS.xml');
+        print $xmlDoc->saveXML();
+        header("Content-Type: text/xml");
+        die();
+    }
 }

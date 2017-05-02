@@ -39,6 +39,10 @@ Route::get('atom', [
     'as' => 'atom',
     'uses' => 'AtomController@mostrarAtom'
 ]);
+Route::get('RSS', [
+    'as' => 'RSS',
+    'uses' => 'RSSController@mostrarRSS'
+]);
 
 
 

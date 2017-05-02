@@ -11,6 +11,11 @@
       <link/>
     </image>
     <item>
+      <link href="/home/rodrigo/feed-provider/feedteste cat"/>
+      <title>teste cat</title>
+      <description>cat</description>
+    </item>
+    <item>
       <link href="/var/www/html/feed-provider/feedMais um teste"/>
       <title>Mais um teste</title>
       <description>testando mais uma</description>
