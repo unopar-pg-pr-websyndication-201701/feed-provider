@@ -35,6 +35,12 @@ Route::get('rss/gerar', [
 ]);
 
 
+Route::get('atom', [
+    'as' => 'atom',
+    'uses' => 'AtomController@mostrarAtom'
+]);
+
+
 
 Route::get('noticia/', [
     'as' => 'noticia.detalhes',
