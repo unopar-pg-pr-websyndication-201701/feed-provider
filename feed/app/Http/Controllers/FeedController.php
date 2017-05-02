@@ -5,6 +5,7 @@ namespace Feed\Http\Controllers;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Feed\Models\Noticia;
+use Feed\Models\Categoria;
 
 class FeedController extends Controller
 {
@@ -29,7 +30,9 @@ class FeedController extends Controller
     public function getFeed()
 
     {
-        $data['noticias'] = Noticia::where("created_at",">", Carbon::now()->subMonths(2))->orderBy('created_at','desc')->get();   
+        $data['noticias'] = Noticia::where("created_at",">", Carbon::now()->subMonths(2))->orderBy('created_at','desc')->get();
+        $result = Categoria::all();
+        $data['qtd_categoria']= sizeof($result);
 
         return view('feed', $data);
 

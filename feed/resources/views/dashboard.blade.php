@@ -8,7 +8,7 @@
                 </div>
                 <div class="panel-body text-center">
                     <h1 class="text-info">
-                        
+                        <?php echo sizeof($notic);?>
                     </h1>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                 </div>
                 <div class="panel-body text-center">
                     <h1 class="text-info">
-                        
+                        {{$qtd_categoria}}
                     </h1>
                 </div>
             </div>
