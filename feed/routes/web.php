@@ -54,6 +54,15 @@ Route::get('excluiNoticia/{id}',[
 	'uses'=>'NoticiaController@excluirNoticia'
 ]);
 
+Route::get('editarNoticia/{id}',[
+	'as'=>'editNoticia',
+	'uses'=>'NoticiaController@editarNoticia'
+]);
+Route::post('updateNoticia/{id}',[
+	'as'=>'updateNoticia',
+	'uses'=>'NoticiaController@updateNoticia'
+]);
+
 //rotas categorias
 
 Route::get('/categorias','CategoriaController@listaCategorias');

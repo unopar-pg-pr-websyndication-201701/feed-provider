@@ -76,11 +76,27 @@ class NoticiaController extends Controller
         return redirect()->action('NoticiaController@listarNoticia')->with('mensagens-sucesso', 'Notícia cadastrada com sucesso!');
     }
 
-    ///Exclusao de noticia 
-
     public function excluirNoticia($id){
         $models['noticia']=Noticia::find($id)->delete();
         \Session::flash('mensagens-sucesso', 'Excluido com Sucesso');
         return redirect()->action('NoticiaController@listarNoticia');
+    }
+
+    public function editarNoticia($id){
+       $noticias['listnoticias'] = Noticia::find($id); 
+       return view('noticias.editNoticia',$noticias);
+    }
+
+    public function updateNoticia(Request $request , $id){
+        echo 'teste';
+        $data = $request->all();
+        
+        if(Noticia::find($id)->update($data)){
+           return redirect()->action('NoticiaController@listarNoticia')->with('mensagens-sucesso', 'Notícia atualizada com Sucesso!');
+       } else {
+           return redirect()->back()
+           ->with('mensagens-erro', 'Erro!!!')
+           ->withInput();
+       }
     }
 }

@@ -21,15 +21,16 @@
 			        <td>{{$noticia->titulo}}</td>
 			        <td>
 			        	<a href="" data-toggle="modal" data-target="#modal{{$noticia->id}}" class="btn btn-success glyphicon glyphicon-eye-open"></a>
-			            <a href="" class="btn btn-primary btn-sm">Editar</a>
-			            <a href="" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+			            <a href="editarNoticia/{{$noticia->id}}" class="btn btn-primary btn-sm">Editar</a>
+			            <a href="" onclick="pegaId({{$noticia->id}})" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete-modal">Excluir</a>
 			        </td>
 		    	</tr>
+		    	<!-- Inclui o arquivo de modal passando o objeto noticia por parametro para o arquivo incluido -->
+                @include('noticias.noticia-detalhes', ['notic' => $noticia])
 		    @endforeach
 		    </tbody>
 		</table>
-		<!-- Inclui o arquivo de modal passando o objeto noticia por parametro para o arquivo incluido -->
-                @include('noticias.noticia-detalhes', ['notic' => $noticia])
+		
 	</div>		
 </div>
 @if(isset($noticia->id))
@@ -44,7 +45,7 @@
                    <h4 class="alert alert-danger" id="modalLabel">Deseja Excluir a Noticia</h4>
                 </div>
                 <div class="modal-footer">
-                    <a href="{{action('NoticiaController@excluirNoticia',$noticia->id)}}" title="Confirmar" class="btn btn-success ">Sim</a>
+                    <a id="sim" href="" title="Confirmar" class="btn btn-success ">Sim</a>
                 	<a href="{{ route('listarNoticias') }}" title="Cancelar" class="btn btn-danger ">Não</a>
                 </div>   
             </div>
@@ -52,4 +53,10 @@
     </div>
 @else
 @endif
+<script type="text/javascript">
+	function pegaId(id){
+		var idexcluir=id;
+		sim.setAttribute("href","excluiNoticia/"+idexcluir);
+	}	
+</script>
 @stop
