@@ -24,4 +24,3 @@
 		</div>
 	@endforeach
 @stop
-Quarta-feira, 03/05/2017, às 06:14, por Helio Gurovitz
