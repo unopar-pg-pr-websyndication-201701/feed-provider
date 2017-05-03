@@ -28,8 +28,8 @@ Route::get('feed', [
     'uses' => 'FeedController@getFeed'
 ]);
 
-Route::get('atom/gerar', [
-    'as' => 'atom.gerar',
+Route::get('atom', [
+    'as' => 'atom',
     'uses' => 'AtomController@gerarAtom'
 ]);
 Route::get('rss/gerar', [
@@ -38,10 +38,6 @@ Route::get('rss/gerar', [
 ]);
 
 
-Route::get('atom', [
-    'as' => 'atom',
-    'uses' => 'AtomController@mostrarAtom'
-]);
 Route::get('RSS', [
     'as' => 'RSS',
     'uses' => 'RSSController@mostrarRSS'

@@ -7,6 +7,12 @@
     <name/>
   </author>
   <entry>
+    <link href="/noticia/TESTE"/>
+    <title>TESTE</title>
+    <content>TESTE</content>
+    <pubDate>2017-05-03 20:35:41</pubDate>
+  </entry>
+  <entry>
     <link href="/noticia/Titulo27"/>
     <title>Titulo 27</title>
     <content>Descrição 27</content>
