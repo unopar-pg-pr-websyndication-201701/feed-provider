@@ -87,6 +87,7 @@ class NoticiaController extends Controller
 
     public function editarNoticia($id){
        $noticias['listnoticias'] = Noticia::find($id); 
+       $noticias['listcategorias']=Categoria::all();
        return view('noticias.editNoticia',$noticias);
     }
 

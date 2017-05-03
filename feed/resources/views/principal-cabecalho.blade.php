@@ -7,8 +7,13 @@
             </ul>
     
             <ul class="nav navbar-nav navbar-right">
+<<<<<<< HEAD
                     <li><a href="{{route('atom.gerar')}}" class="btn btn-danger">Gerar Atom</a></li>                    
                     <li><a href="{{route('rss')}}" class="btn btn-danger">Gerar RSS</a></li>
+=======
+                    <li><a href="{{route('atom')}}" class="btn btn-danger">Gerar Atom</a></li>                    
+                    <li><a href="{{route('rss.gerar')}}" class="btn btn-danger">Gerar RSS</a></li>
+>>>>>>> 6aebee6c38ac76f844baf00efb06b4954c16e7d5
                 @if (Auth::guest())
                     <li><a href="{{ route('login') }}">Acessar</a></li>
                 @else
