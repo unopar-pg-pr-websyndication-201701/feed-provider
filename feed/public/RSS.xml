@@ -11,6 +11,12 @@
       <link/>
     </image>
     <item>
+      <link href="http://localhost:8000/noticia/TESTE"/>
+      <pubDate>2017-05-03 20:35:41</pubDate>
+      <title>TESTE</title>
+      <description>TESTE</description>
+    </item>
+    <item>
       <link href="http://localhost:8000/noticia/Titulo27"/>
       <pubDate>2017-05-03 02:16:58</pubDate>
       <title>Titulo 27</title>

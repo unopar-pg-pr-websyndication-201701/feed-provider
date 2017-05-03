@@ -38,19 +38,6 @@ Route::get('rss', [
 ]);
 
 
-<<<<<<< HEAD
-Route::get('atom', [
-    'as' => 'atom',
-    'uses' => 'AtomController@mostrarAtom'
-=======
-Route::get('RSS', [
-    'as' => 'RSS',
-    'uses' => 'RSSController@mostrarRSS'
->>>>>>> 6aebee6c38ac76f844baf00efb06b4954c16e7d5
-]);
-
-
-
 Route::get('listarNoticia',[
 	'as'=> 'listarNoticias',
 	'uses'=> 'NoticiaController@listarNoticia']);
