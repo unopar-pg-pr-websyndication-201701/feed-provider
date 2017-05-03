@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Feed\Models\Noticia;
 use Feed\Models\Categoria;
+use Illuminate\Pagination\Paginator;
 
 class FeedController extends Controller
 {
@@ -33,6 +34,7 @@ class FeedController extends Controller
         $data['noticias'] = Noticia::where("created_at",">", Carbon::now()->subMonths(2))->orderBy('created_at','desc')->get();
         $result = Categoria::all();
         $data['qtd_categoria']= sizeof($result);
+        $data['mais_visualizada'] = Categoria::paginate(4);
 
         return view('feed', $data);
 
