@@ -32,8 +32,8 @@ Route::get('atom/gerar', [
     'as' => 'atom.gerar',
     'uses' => 'AtomController@gerarAtom'
 ]);
-Route::get('rss/gerar', [
-    'as' => 'rss.gerar',
+Route::get('rss', [
+    'as' => 'rss',
     'uses' => 'RSSController@gerarRSS'
 ]);
 
@@ -41,10 +41,6 @@ Route::get('rss/gerar', [
 Route::get('atom', [
     'as' => 'atom',
     'uses' => 'AtomController@mostrarAtom'
-]);
-Route::get('RSS', [
-    'as' => 'RSS',
-    'uses' => 'RSSController@mostrarRSS'
 ]);
 
 
