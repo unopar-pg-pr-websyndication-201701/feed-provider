@@ -27,7 +27,13 @@
   <div class="col-md-6 col-md-offset-1"">
       <label for="select_categoria" class="col-sm-2 form-label">Categorias</label>
       <select name="categoria_id" id="select_categoria" class="form-control" required="required">
-        <option value="value="{{$listnoticias->categoria_id}}"">{{$listnoticias->categoria['nome']}}</option>
+       @foreach($listcategorias as $categoria) 
+          @if($categoria->id == $listnoticias->categoria_id)
+              <option selected="selected" value="{{$categoria->id}}"">{{$categoria->nome}}</option>
+          @else
+              <option value="value="{{$categoria->id}}"">{{$categoria->nome}}</option>
+          @endif
+      @endforeach 
       </select>
   </div>
   </div>

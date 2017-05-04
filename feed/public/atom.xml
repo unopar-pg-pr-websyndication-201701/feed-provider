@@ -7,6 +7,30 @@
     <name/>
   </author>
   <entry>
+    <link href="/noticia/TESTE"/>
+    <title>TESTE</title>
+    <content>TESTE</content>
+    <pubDate>2017-05-03 20:35:41</pubDate>
+  </entry>
+  <entry>
+    <link href="/noticia/Titulo27"/>
+    <title>Titulo 27</title>
+    <content>Descrição 27</content>
+    <pubDate>2017-05-03 02:16:58</pubDate>
+  </entry>
+  <entry>
+    <link href="/noticia/Titulo26"/>
+    <title>Titulo 26</title>
+    <content>Descrição 26</content>
+    <pubDate>2017-05-03 02:05:46</pubDate>
+  </entry>
+  <entry>
+    <link href="/noticia/Titulo25"/>
+    <title>Titulo 25</title>
+    <content>Descrição 25</content>
+    <pubDate>2017-05-03 02:03:45</pubDate>
+  </entry>
+  <entry>
     <link href="/noticia/Titulo24"/>
     <title>Titulo 24</title>
     <content>descrição 24</content>
