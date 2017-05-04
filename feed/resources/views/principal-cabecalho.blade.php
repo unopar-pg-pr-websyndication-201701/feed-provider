@@ -8,7 +8,7 @@
     
             <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{route('atom')}}" class="btn btn-danger">Gerar Atom</a></li>                    
-                    <li><a href="{{route('rss.gerar')}}" class="btn btn-danger">Gerar RSS</a></li>
+                    <li><a href="{{route('rss')}}" class="btn btn-danger">Gerar RSS</a></li>
                 @if (Auth::guest())
                     <li><a href="{{ route('login') }}">Acessar</a></li>
                 @else

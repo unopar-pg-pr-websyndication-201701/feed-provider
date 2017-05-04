@@ -106,19 +106,15 @@ class RSSController extends Controller
         $rss = $xmlDoc->saveXML();
         Storage::disk('public')->put('RSS.xml',$rss);
 
-        return \Redirect::back()
-            ->with('mensagens-sucesso', 'Feed RSS Gerado com Sucesso !!!');
+        print $xmlDoc->saveXML();
+        header("Content-Type: text/xml");
+        die();
     }
 
     function mostrarRSS(){
 
         $this->gerarRSS();
 
-        $xmlDoc = new \DOMDocument('1.0','utf-8');
-        $RSS = Storage::disk('public')->get('RSS.xml');
-        $xmlDoc->load(base_path().'/public/RSS.xml');
-        print $xmlDoc->saveXML();
-        header("Content-Type: text/xml");
-        die();
+        
     }
 }
