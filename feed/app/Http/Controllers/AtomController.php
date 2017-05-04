@@ -78,12 +78,15 @@ class AtomController extends Controller
             $titleE = $xmlDoc->createElement('title', $noticia->titulo);
             $titleE = $entry->appendChild($titleE);
 
+            $media = $xmlDoc->createElement('media', '<![CDATA[
+                <img alt="'.$noticia->imagem_nome.'" src="/images/noticias/'.$noticia->imagem_nome.'" />]]>');
+            $media = $entry->appendChild($media);
+
             $contentE = $xmlDoc->createElement('content', $noticia->descricao);
             $contentE = $entry->appendChild($contentE);
 
             $pubDate = $xmlDoc->createElement('pubDate', $noticia->created_at);
             $pubDate = $entry->appendChild($pubDate);
-
         }
 
         header("Content-Type: text/xml");
