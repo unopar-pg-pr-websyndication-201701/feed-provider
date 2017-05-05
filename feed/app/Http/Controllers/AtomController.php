@@ -45,16 +45,17 @@ class AtomController extends Controller
         $xmlATOM = $xmlDoc->appendChild($xmlATOM);
 
         //Elemento <title>
-        $title = $xmlDoc->createElement('title');
+        $title = $xmlDoc->createElement('title', 'Feed Provider');
         $title = $xmlATOM->appendChild($title);
 
         //Elemento <link>
         $link = $xmlDoc->createElement('link');
         $link->setAttribute('rel','self');
+        $link->setAttribute('href','http://carambei.pr.gov.br/feed/feed-provider/feed/public/');
         $link = $xmlATOM->appendChild($link);
 
         //Elemento <id>
-        $id = $xmlDoc->createElement('id');
+        $id = $xmlDoc->createElement('id','<![CDATA[ http://carambei.pr.gov.br/feed/feed-provider/feed/public/ ]]>');
         $id = $xmlATOM->appendChild($id);
 
         
@@ -63,7 +64,7 @@ class AtomController extends Controller
         $author = $xmlATOM->appendChild($author);
 
         //Elemento <autor> -> <name>
-        $nome_autor = $xmlDoc->createElement('name');
+        $nome_autor = $xmlDoc->createElement('name', 'Administrador');
         $nome_autor = $author->appendChild($nome_autor);
 
         foreach ($noticias as $noticia) {
@@ -78,12 +79,15 @@ class AtomController extends Controller
             $titleE = $xmlDoc->createElement('title', $noticia->titulo);
             $titleE = $entry->appendChild($titleE);
 
+            $media = $xmlDoc->createElement('media', '<![CDATA[
+                <img alt="'.$noticia->imagem_nome.'" src="/images/noticias/'.$noticia->imagem_nome.'" />]]>');
+            $media = $entry->appendChild($media);
+
             $contentE = $xmlDoc->createElement('content', $noticia->descricao);
             $contentE = $entry->appendChild($contentE);
 
             $pubDate = $xmlDoc->createElement('pubDate', $noticia->created_at);
             $pubDate = $entry->appendChild($pubDate);
-
         }
 
         header("Content-Type: text/xml");
