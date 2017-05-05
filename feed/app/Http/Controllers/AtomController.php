@@ -79,7 +79,7 @@ class AtomController extends Controller
             $titleE = $xmlDoc->createElement('title', $noticia->titulo);
             $titleE = $entry->appendChild($titleE);
 
-            $img = '<![CDATA[ <img alt="'.$noticia->imagem_nome.'" src="/images/noticias/'.$noticia->imagem_nome.'" />]]>';
+            $img = '<![CDATA[ <img alt="'.$noticia->imagem_nome.'" src="http://carambei.pr.gov.br/feed/feed-provider/feed/public/images/noticias/'.$noticia->imagem_nome.'" />]]>';
 
             $contentE = $xmlDoc->createElement('content', $img.$noticia->descricao);
             $contentE = $entry->appendChild($contentE);
