@@ -7,11 +7,11 @@
     
             <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{route('atom')}}" class="">
-                            <img src="/images/feed/atom-icon.png" alt="Gerar Atom" style="height:45px;width:45px;">
+                            <img src="images/feed/atom-icon.png" alt="Gerar Atom" style="height:45px;width:45px;">
                         </a>
                     </li>                    
                     <li><a href="{{route('rss')}}" class="">
-                            <img src="/images/feed/rss-icon.png" alt="Gerar RSS" style="height:40px;width:40px;">
+                            <img src="images/feed/rss-icon.png" alt="Gerar RSS" style="height:40px;width:40px;">
                         </a>
                     </li>
                 @if (Auth::guest())
@@ -34,10 +34,10 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="{{url('/adicionar/categoria')}}">Nova</a>
+                                <a href="{{url('adicionar/categoria')}}">Nova</a>
                             </li>
                             <li>
-                                <a href="{{url('/categorias')}}">Listar</a>
+                                <a href="{{url('categorias')}}">Listar</a>
                                     {{ csrf_field() }}
                                 </form>
                             </li>
