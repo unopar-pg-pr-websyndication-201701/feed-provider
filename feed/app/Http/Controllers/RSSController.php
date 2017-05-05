@@ -49,36 +49,21 @@ class RSSController extends Controller
         $channel = $xmlRSS->appendChild($channel);
 
         //Elemento <title>
-        $title = $xmlDoc->createElement('title');
+        $title = $xmlDoc->createElement('title', 'Feed Provider');
         $title = $channel->appendChild($title);
 
         //Elemento <link>
         $link = $xmlDoc->createElement('link');
+        $link->setAttribute('href','http://carambei.pr.gov.br/feed/feed-provider/feed/public/');
         $link = $channel->appendChild($link);
 
         //Elemento <description>
-        $description = $xmlDoc->createElement('description');
+        $description = $xmlDoc->createElement('description' , 'Ultimas noticias');
         $description = $channel->appendChild($description);
 
         //Elemento <language>
-        $language = $xmlDoc->createElement('language');
+        $language = $xmlDoc->createElement('language', 'PT-BR');
         $language = $channel->appendChild($language);
-
-        //Elemento <image> ->
-        $image = $xmlDoc->createElement('image');
-        $image = $channel->appendChild($image);
-
-        //Elemento <title> ->
-        $title2 = $xmlDoc->createElement('title');
-        $title2 = $image->appendChild($title2);
-
-        //Elemento <url> ->
-        $url = $xmlDoc->createElement('url');
-        $url = $image->appendChild($url);
-
-        //Elemento <link> ->
-        $link2 = $xmlDoc->createElement('link');
-        $link2 = $image->appendChild($link2);
 
         foreach ($noticias as $noticia) {
             //Elemento <item>
@@ -89,9 +74,8 @@ class RSSController extends Controller
             $linkItem->setAttribute('href','http://'.$_SERVER['HTTP_HOST'].$noticia->url.'');
             $linkItem = $item->appendChild($linkItem);
 
-            $media = $xmlDoc->createElement('media', '<![CDATA[
-                <img alt="'.$noticia->imagem_nome.'" src="'.$_SERVER['HTTP_HOST'].'/images/noticias/'.$noticia->imagem_nome.'" />]]>');
-            $media = $item->appendChild($media);
+            $img = '<![CDATA[
+                <img alt="'.$noticia->imagem_nome.'" src="http://carambei.pr.gov.br/feed/feed-provider/feed/public/images/noticias/'.$noticia->imagem_nome.'" />]]>';
 
             //Elemento <pubDate>
             $pubDate = $xmlDoc->createElement('pubDate', $noticia->created_at);
@@ -100,7 +84,9 @@ class RSSController extends Controller
             $titleItem = $xmlDoc->createElement('title', $noticia->titulo);
             $titleItem = $item->appendChild($titleItem);
 
-            $descriptionItem = $xmlDoc->createElement('description', $noticia->descricao);
+
+
+            $descriptionItem = $xmlDoc->createElement('description', $img.$noticia->descricao);
             $descriptionItem = $item->appendChild($descriptionItem);
 
         }
