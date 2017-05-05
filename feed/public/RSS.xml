@@ -1,54 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
   <channel>
-    <title/>
-    <link/>
-    <description/>
-    <language/>
-    <image>
-      <title/>
-      <url/>
-      <link/>
-    </image>
+    <title>Feed Provider</title>
+    <link href="http://carambei.pr.gov.br/feed/feed-provider/feed/public/"/>
+    <description>Ultimas noticias</description>
+    <language>PT-BR</language>
     <item>
       <link href="http://localhost:8000/noticia/TESTE"/>
-      <media>&lt;![CDATA[
-                &lt;img alt="TESTE.png" src="localhost:8000/images/noticias/TESTE.png" /&gt;]]&gt;</media>
       <pubDate>2017-05-03 20:35:41</pubDate>
       <title>TESTE</title>
-      <description>TESTE</description>
+      <description>&lt;![CDATA[
+                &lt;img alt="TESTE.png" src="http://carambei.pr.gov.br/feed/feed-provider/feed/public/images/noticias/TESTE.png" /&gt;]]&gt;TESTE</description>
     </item>
     <item>
       <link href="http://localhost:8000/noticia/Titulo27"/>
-      <media>&lt;![CDATA[
-                &lt;img alt="Titulo27.png" src="localhost:8000/images/noticias/Titulo27.png" /&gt;]]&gt;</media>
       <pubDate>2017-05-03 02:16:58</pubDate>
       <title>Titulo 27</title>
-      <description>Descrição 27</description>
+      <description>&lt;![CDATA[
+                &lt;img alt="Titulo27.png" src="http://carambei.pr.gov.br/feed/feed-provider/feed/public/images/noticias/Titulo27.png" /&gt;]]&gt;Descrição 27</description>
     </item>
     <item>
       <link href="http://localhost:8000/noticia/Titulo26"/>
-      <media>&lt;![CDATA[
-                &lt;img alt="Titulo26.jpg" src="localhost:8000/images/noticias/Titulo26.jpg" /&gt;]]&gt;</media>
       <pubDate>2017-05-03 02:05:46</pubDate>
       <title>Titulo 26</title>
-      <description>Descrição 26</description>
+      <description>&lt;![CDATA[
+                &lt;img alt="Titulo26.jpg" src="http://carambei.pr.gov.br/feed/feed-provider/feed/public/images/noticias/Titulo26.jpg" /&gt;]]&gt;Descrição 26</description>
     </item>
     <item>
       <link href="http://localhost:8000/noticia/Titulo25"/>
-      <media>&lt;![CDATA[
-                &lt;img alt="Titulo25.jpg" src="localhost:8000/images/noticias/Titulo25.jpg" /&gt;]]&gt;</media>
       <pubDate>2017-05-03 02:03:45</pubDate>
       <title>Titulo 25</title>
-      <description>Descrição 25</description>
+      <description>&lt;![CDATA[
+                &lt;img alt="Titulo25.jpg" src="http://carambei.pr.gov.br/feed/feed-provider/feed/public/images/noticias/Titulo25.jpg" /&gt;]]&gt;Descrição 25</description>
     </item>
     <item>
       <link href="http://localhost:8000/noticia/Titulo24"/>
-      <media>&lt;![CDATA[
-                &lt;img alt="Titulo24.jpg" src="localhost:8000/images/noticias/Titulo24.jpg" /&gt;]]&gt;</media>
       <pubDate>2017-05-02 20:11:31</pubDate>
       <title>Titulo 24</title>
-      <description>descrição 24</description>
+      <description>&lt;![CDATA[
+                &lt;img alt="Titulo24.jpg" src="http://carambei.pr.gov.br/feed/feed-provider/feed/public/images/noticias/Titulo24.jpg" /&gt;]]&gt;descrição 24</description>
     </item>
   </channel>
 </rss>
