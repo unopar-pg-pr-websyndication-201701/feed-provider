@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title/>
-  <link rel="self"/>
-  <id/>
+  <title>Feed Provider</title>
+  <link rel="self" href="http://carambei.pr.gov.br/feed/feed-provider/feed/public/"/>
+  <id>&lt;![CDATA[ http://carambei.pr.gov.br/feed/feed-provider/feed/public/ ]]&gt;</id>
   <author>
-    <name/>
+    <name>Administrador</name>
   </author>
   <entry>
     <link href="/noticia/TESTE"/>
