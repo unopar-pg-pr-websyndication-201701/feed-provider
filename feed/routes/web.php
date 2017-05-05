@@ -38,37 +38,41 @@ Route::get('rss', [
 ]);
 
 
-Route::get('listarNoticia',[
-	'as'=> 'listarNoticias',
-	'uses'=> 'NoticiaController@listarNoticia']);
+Route::group(['middleware' => 'auth'], function () {
+    
 
-Route::get('cadNoticia',[
-	'as'=> 'cadastrarNoticia',
-	'uses'=> 'NoticiaController@cadNoticia']);
+	Route::get('listarNoticia',[
+		'as'=> 'listarNoticias',
+		'uses'=> 'NoticiaController@listarNoticia']);
 
-Route::post('salvarNoticia',[
-	'as'=>'salvarNoticia',
-	'uses'=>'NoticiaController@salvarNoticia']);
+	Route::get('cadNoticia',[
+		'as'=> 'cadastrarNoticia',
+		'uses'=> 'NoticiaController@cadNoticia']);
+
+	Route::post('salvarNoticia',[
+		'as'=>'salvarNoticia',
+		'uses'=>'NoticiaController@salvarNoticia']);
 
 
-Route::get('excluiNoticia/{id}',[
-	'as'=>'excluiNoticia',
-	'uses'=>'NoticiaController@excluirNoticia']);
+	Route::get('excluiNoticia/{id}',[
+		'as'=>'excluiNoticia',
+		'uses'=>'NoticiaController@excluirNoticia']);
 
-Route::get('editarNoticia/{id}',[
-	'as'=>'editNoticia',
-	'uses'=>'NoticiaController@editarNoticia']);
+	Route::get('editarNoticia/{id}',[
+		'as'=>'editNoticia',
+		'uses'=>'NoticiaController@editarNoticia']);
 
-Route::post('updateNoticia',[
-	'as'=>'updateNoticia',
-	'uses'=>'NoticiaController@updateNoticia']);
+	Route::post('updateNoticia',[
+		'as'=>'updateNoticia',
+		'uses'=>'NoticiaController@updateNoticia']);
 
-//rotas categorias
+	//rotas categorias
 
-Route::get('/categorias','CategoriaController@listaCategorias');
-Route::get('/adicionar/categoria','CategoriaController@novaCategoria');
-Route::post('categoria/adiciona','CategoriaController@adicionarCategoria');
-Route::get('categorias/remove/{id}','CategoriaController@removerCategoria');
-Route::get('/categorias/editar/{id?}','CategoriaController@alterarCategoria');
-Route::post('categorias/salvar','CategoriaController@salvarCategoria');
+	Route::get('/categorias','CategoriaController@listaCategorias');
+	Route::get('/adicionar/categoria','CategoriaController@novaCategoria');
+	Route::post('categoria/adiciona','CategoriaController@adicionarCategoria');
+	Route::get('categorias/remove/{id}','CategoriaController@removerCategoria');
+	Route::get('/categorias/editar/{id?}','CategoriaController@alterarCategoria');
+	Route::post('categorias/salvar','CategoriaController@salvarCategoria');
 
+});

@@ -17,7 +17,7 @@
         </p>
       </div>
       <div class="modal-body">
-          <img src="/images/noticias/{{$notic->imagem_nome}}" alt="{{$notic->imagem_nome}}" style="width: 280px; height: 200px; padding:5px 5px 5px 5px;">
+          <img src="images/noticias/{{$notic->imagem_nome}}" alt="{{$notic->imagem_nome}}" style="width: 280px; height: 200px; padding:5px 5px 5px 5px;">
         <div class="col-md-6">
           {{$notic->conteudo}}
         </div>

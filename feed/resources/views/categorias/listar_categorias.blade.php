@@ -20,7 +20,7 @@
                         <td class="primary">{{$c->id}}</td>
                         <td class="primary">{{$c->nome}}</td>
                         <td>
-                            <a href="{{url('/categorias/editar/'.$c->id)}}" class="btn btn-primary btn-sm" alt="editar">Editar</a>
+                            <a href="{{url('categorias/editar/'.$c->id)}}" class="btn btn-primary btn-sm" alt="editar">Editar</a>
                             <a href="{{url('categoria/remover/'.$c->id)}}" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                         </td>
                 </tr> 
@@ -47,7 +47,7 @@
                     
                     
                     <a href="{{action('CategoriaController@removerCategoria',$c->id)}}" title="Confirmar" class="btn btn-success ">Sim</a>
-                    <a href="{{url('/categorias')}}" title="Cancelar" class="btn btn-danger ">Não</a>
+                    <a href="{{url('categorias')}}" title="Cancelar" class="btn btn-danger ">Não</a>
                        
                     
                 </div>   

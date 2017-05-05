@@ -11,7 +11,7 @@
         <div class="panel-body">
             <div class="col-md-3">
                 <div style="background-color: #f1f1f1; width: 250px; height: 200px;">
-                    <img src="/images/noticias/{{$noticia->imagem_nome}}" alt="{{$noticia->imagem_nome}}" style="width: 240px; height: 190px; padding:5px 5px 5px 5px;">
+                    <img src="images/noticias/{{$noticia->imagem_nome}}" alt="{{$noticia->imagem_nome}}" style="width: 240px; height: 190px; padding:5px 5px 5px 5px;">
                 </div>
             </div>
             <div class="col-md-9">

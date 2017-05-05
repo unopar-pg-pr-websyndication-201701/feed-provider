@@ -43,7 +43,7 @@
   </div>
   <div class="form-group col-md-12">
     <label for="nome-imagem" class="form-label">Imagem</label>
-    <img id="imagem_preview" src="/images/noticias/{{$listnoticias->imagem_nome}}" class="col-sm-4">
+    <img id="imagem_preview" src="images/noticias/{{$listnoticias->imagem_nome}}" class="col-sm-4">
     <input type="file" onchange="alteraImagem()" id="nome-imagem" name="imagem_nome">
     <button type="submit"  class="btn btn-primary pull-right">Alterar Notícia</button>
   </div>
