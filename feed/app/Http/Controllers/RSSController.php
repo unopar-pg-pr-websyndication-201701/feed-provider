@@ -90,7 +90,7 @@ class RSSController extends Controller
             $linkItem = $item->appendChild($linkItem);
 
             $media = $xmlDoc->createElement('media', '<![CDATA[
-                <img alt="'.$noticia->imagem_nome.'" src="/images/noticias/'.$noticia->imagem_nome.'" />]]>');
+                <img alt="'.$noticia->imagem_nome.'" src="'.$_SERVER['HTTP_HOST'].'/images/noticias/'.$noticia->imagem_nome.'" />]]>');
             $media = $item->appendChild($media);
 
             //Elemento <pubDate>

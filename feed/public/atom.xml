@@ -10,7 +10,7 @@
     <link href="/noticia/TESTE"/>
     <title>TESTE</title>
     <media>&lt;![CDATA[
-                &lt;img alt="TESTE.png" src="/images/noticias/TESTE.png" /&gt;]]&gt;</media>
+                &lt;img alt="TESTE.png" src="localhost:8000/images/noticias/TESTE.png" /&gt;]]&gt;</media>
     <content>TESTE</content>
     <pubDate>2017-05-03 20:35:41</pubDate>
   </entry>
@@ -18,7 +18,7 @@
     <link href="/noticia/Titulo27"/>
     <title>Titulo 27</title>
     <media>&lt;![CDATA[
-                &lt;img alt="Titulo27.png" src="/images/noticias/Titulo27.png" /&gt;]]&gt;</media>
+                &lt;img alt="Titulo27.png" src="localhost:8000/images/noticias/Titulo27.png" /&gt;]]&gt;</media>
     <content>Descrição 27</content>
     <pubDate>2017-05-03 02:16:58</pubDate>
   </entry>
@@ -26,7 +26,7 @@
     <link href="/noticia/Titulo26"/>
     <title>Titulo 26</title>
     <media>&lt;![CDATA[
-                &lt;img alt="Titulo26.jpg" src="/images/noticias/Titulo26.jpg" /&gt;]]&gt;</media>
+                &lt;img alt="Titulo26.jpg" src="localhost:8000/images/noticias/Titulo26.jpg" /&gt;]]&gt;</media>
     <content>Descrição 26</content>
     <pubDate>2017-05-03 02:05:46</pubDate>
   </entry>
@@ -34,7 +34,7 @@
     <link href="/noticia/Titulo25"/>
     <title>Titulo 25</title>
     <media>&lt;![CDATA[
-                &lt;img alt="Titulo25.jpg" src="/images/noticias/Titulo25.jpg" /&gt;]]&gt;</media>
+                &lt;img alt="Titulo25.jpg" src="localhost:8000/images/noticias/Titulo25.jpg" /&gt;]]&gt;</media>
     <content>Descrição 25</content>
     <pubDate>2017-05-03 02:03:45</pubDate>
   </entry>
@@ -42,7 +42,7 @@
     <link href="/noticia/Titulo24"/>
     <title>Titulo 24</title>
     <media>&lt;![CDATA[
-                &lt;img alt="Titulo24.jpg" src="/images/noticias/Titulo24.jpg" /&gt;]]&gt;</media>
+                &lt;img alt="Titulo24.jpg" src="localhost:8000/images/noticias/Titulo24.jpg" /&gt;]]&gt;</media>
     <content>descrição 24</content>
     <pubDate>2017-05-02 20:11:31</pubDate>
   </entry>
