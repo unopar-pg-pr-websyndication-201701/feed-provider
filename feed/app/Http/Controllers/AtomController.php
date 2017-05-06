@@ -73,7 +73,7 @@ class AtomController extends Controller
             $entry = $xmlATOM->appendChild($entry);
 
             $linkE = $xmlDoc->createElement('link');
-            $linkE->setAttribute('href',''.$noticia->url.'');
+            $linkE->setAttribute('href','http://carambei.pr.gov.br/feed/feed-provider/feed/public/'.$noticia->url.'');
             $linkE = $entry->appendChild($linkE);
 
             $titleE = $xmlDoc->createElement('title', $noticia->titulo);

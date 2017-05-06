@@ -7,31 +7,31 @@
     <name>Administrador</name>
   </author>
   <entry>
-    <link href="/noticia/TESTE"/>
+    <link href="http://carambei.pr.gov.br/feed/feed-provider/feed/public//noticia/TESTE"/>
     <title>TESTE</title>
     <content>&lt;![CDATA[ &lt;img alt="TESTE.png" src="http://carambei.pr.gov.br/feed/feed-provider/feed/public/images/noticias/TESTE.png" /&gt;]]&gt;TESTE</content>
     <pubDate>2017-05-03 20:35:41</pubDate>
   </entry>
   <entry>
-    <link href="/noticia/Titulo27"/>
+    <link href="http://carambei.pr.gov.br/feed/feed-provider/feed/public//noticia/Titulo27"/>
     <title>Titulo 27</title>
     <content>&lt;![CDATA[ &lt;img alt="Titulo27.png" src="http://carambei.pr.gov.br/feed/feed-provider/feed/public/images/noticias/Titulo27.png" /&gt;]]&gt;Descrição 27</content>
     <pubDate>2017-05-03 02:16:58</pubDate>
   </entry>
   <entry>
-    <link href="/noticia/Titulo26"/>
+    <link href="http://carambei.pr.gov.br/feed/feed-provider/feed/public//noticia/Titulo26"/>
     <title>Titulo 26</title>
     <content>&lt;![CDATA[ &lt;img alt="Titulo26.jpg" src="http://carambei.pr.gov.br/feed/feed-provider/feed/public/images/noticias/Titulo26.jpg" /&gt;]]&gt;Descrição 26</content>
     <pubDate>2017-05-03 02:05:46</pubDate>
   </entry>
   <entry>
-    <link href="/noticia/Titulo25"/>
+    <link href="http://carambei.pr.gov.br/feed/feed-provider/feed/public//noticia/Titulo25"/>
     <title>Titulo 25</title>
     <content>&lt;![CDATA[ &lt;img alt="Titulo25.jpg" src="http://carambei.pr.gov.br/feed/feed-provider/feed/public/images/noticias/Titulo25.jpg" /&gt;]]&gt;Descrição 25</content>
     <pubDate>2017-05-03 02:03:45</pubDate>
   </entry>
   <entry>
-    <link href="/noticia/Titulo24"/>
+    <link href="http://carambei.pr.gov.br/feed/feed-provider/feed/public//noticia/Titulo24"/>
     <title>Titulo 24</title>
     <content>&lt;![CDATA[ &lt;img alt="Titulo24.jpg" src="http://carambei.pr.gov.br/feed/feed-provider/feed/public/images/noticias/Titulo24.jpg" /&gt;]]&gt;descrição 24</content>
     <pubDate>2017-05-02 20:11:31</pubDate>
