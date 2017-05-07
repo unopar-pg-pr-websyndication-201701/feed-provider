@@ -10,14 +10,14 @@
 		</div>
 		<h2 class="page-header text-info" style="font-weight:bold;">{{$not->titulo}}</h2>
 		<div class="container col-md-8" id="conteudo">
-			<img src="images/noticias/{{$not->imagem_nome}}" alt="{{$not->imagem_nome}}" style="height:600px;width:600px;">
+			<img src="/images/noticias/{{$not->imagem_nome}}" alt="{{$not->imagem_nome}}" style="height:600px;width:600px;">
 			<p>{{$not->conteudo}}</p>
 		</div>
 		<div class="container col-md-4" id="aside_autor">
 			<h3 style="font-weight:bold;">AUTOR</h3>
 			<div style="border:1px solid black;border-radius:10px;">
 				<p>
-					<img src="images/outras/autor.png" class="img-responsive img-circle" alt="{{$not->imagem_nome}}" style="height:75px;width:75px;margin:10px 10px 10px 10px;">
+					<img src="/images/outras/autor.png" class="img-responsive img-circle" alt="{{$not->imagem_nome}}" style="height:75px;width:75px;margin:10px 10px 10px 10px;">
 					<span style="font-weight:bold;text-transform:uppercase;">{{$not->autor}}</span>		
 				</p>
 			</div>
