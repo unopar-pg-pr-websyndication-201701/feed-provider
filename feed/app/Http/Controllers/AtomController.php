@@ -32,6 +32,8 @@ class AtomController extends Controller
      */
     public function gerarAtom(){
 
+        $base_url = 'http://'.$_SERVER['HTTP_HOST'].'';
+
         $noticias = Noticia::where("created_at",">", Carbon::now()->subMonths(2))->orderBy('created_at','desc')->get();   
 
         //Iniciar documento XML
@@ -51,11 +53,11 @@ class AtomController extends Controller
         //Elemento <link>
         $link = $xmlDoc->createElement('link');
         $link->setAttribute('rel','self');
-        $link->setAttribute('href','http://carambei.pr.gov.br/feed/feed-provider/feed/public/');
+        $link->setAttribute('href', $base_url);
         $link = $xmlATOM->appendChild($link);
 
         //Elemento <id>
-        $id = $xmlDoc->createElement('id','<![CDATA[ http://carambei.pr.gov.br/feed/feed-provider/feed/public/ ]]>');
+        $id = $xmlDoc->createElement('id','<![CDATA[ '.$base_url.']]>');
         $id = $xmlATOM->appendChild($id);
 
         
@@ -73,13 +75,13 @@ class AtomController extends Controller
             $entry = $xmlATOM->appendChild($entry);
 
             $linkE = $xmlDoc->createElement('link');
-            $linkE->setAttribute('href',''.$noticia->url.'');
+            $linkE->setAttribute('href',''.$base_url.$noticia->url.'');
             $linkE = $entry->appendChild($linkE);
 
             $titleE = $xmlDoc->createElement('title', $noticia->titulo);
             $titleE = $entry->appendChild($titleE);
 
-            $img = '<![CDATA[ <img alt="'.$noticia->imagem_nome.'" src="http://carambei.pr.gov.br/feed/feed-provider/feed/public/images/noticias/'.$noticia->imagem_nome.'" />]]>';
+            $img = '<![CDATA[ <img alt="'.$noticia->imagem_nome.'" src="'.$base_url.'/images/noticias/'.$noticia->imagem_nome.'" />]]>';
 
             $contentE = $xmlDoc->createElement('content', $img.$noticia->descricao);
             $contentE = $entry->appendChild($contentE);
