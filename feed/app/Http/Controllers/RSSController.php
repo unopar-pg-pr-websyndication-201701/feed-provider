@@ -32,6 +32,8 @@ class RSSController extends Controller
      */
     public function gerarRSS(){
 
+        $base_url = 'http://'.$_SERVER['HTTP_HOST'].'';
+
         $noticias = Noticia::where("created_at",">", Carbon::now()->subMonths(2))->orderBy('created_at','desc')->get();   
 
         //Iniciar documento XML
@@ -54,7 +56,7 @@ class RSSController extends Controller
 
         //Elemento <link>
         $link = $xmlDoc->createElement('link');
-        $link->setAttribute('href','http://carambei.pr.gov.br/feed/feed-provider/feed/public/');
+        $link->setAttribute('href',$base_url);
         $link = $channel->appendChild($link);
 
         //Elemento <description>
@@ -74,8 +76,7 @@ class RSSController extends Controller
             $linkItem->setAttribute('href','http://'.$_SERVER['HTTP_HOST'].$noticia->url.'');
             $linkItem = $item->appendChild($linkItem);
 
-            $img = '<![CDATA[
-                <img alt="'.$noticia->imagem_nome.'" src="http://carambei.pr.gov.br/feed/feed-provider/feed/public/images/noticias/'.$noticia->imagem_nome.'" />]]>';
+            $img = '<img alt="'.$noticia->imagem_nome.'" src="'.$base_url.'/images/noticias/'.$noticia->imagem_nome.'" />';
 
             //Elemento <pubDate>
             $pubDate = $xmlDoc->createElement('pubDate', $noticia->created_at);
