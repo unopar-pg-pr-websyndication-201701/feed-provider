@@ -18,7 +18,7 @@
 			<div style="border:1px solid black;border-radius:10px;">
 				<p>
 					<img src="/images/outras/autor.png" class="img-responsive img-circle" alt="{{$not->imagem_nome}}" style="height:75px;width:75px;margin:10px 10px 10px 10px;">
-					<span style="font-weight:bold;text-transform:uppercase;">{{$not->autor}}</span>		
+					<span style="font-weight:bold;text-transform:uppercase;margin-left:10px;">{{$not->autor}}</span>		
 				</p>
 			</div>
 		</div>

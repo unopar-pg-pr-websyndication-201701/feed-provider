@@ -9,7 +9,7 @@
         <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
         <script src="{{asset('js/jquery-3.2.0.min.js')}}"></script>
         <title>Feed de Notícias</title>
-
+        
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         
