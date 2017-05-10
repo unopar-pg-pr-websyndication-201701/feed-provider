@@ -29,11 +29,5 @@
       <title>Titulo 25</title>
       <description>&lt;img alt="Titulo25.jpg" src="http://localhost:8000/images/noticias/Titulo25.jpg" /&gt;Descrição 25</description>
     </item>
-    <item>
-      <link href="http://localhost:8000/noticia/Titulo24"/>
-      <pubDate>2017-05-02 20:11:31</pubDate>
-      <title>Titulo 24</title>
-      <description>&lt;img alt="Titulo24.jpg" src="http://localhost:8000/images/noticias/Titulo24.jpg" /&gt;descrição 24</description>
-    </item>
   </channel>
 </rss>
